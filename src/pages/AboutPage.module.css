@@ -1,0 +1,266 @@
+.hero {
+  padding-block: var(--space-5) var(--space-4);
+}
+
+.heroRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 800px) {
+  .heroRow {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.heroText {
+  max-width: 60ch;
+  line-height: 1.7;
+}
+
+.heroPhoto {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.missionRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 800px) {
+  .missionRow {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.missionPhotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+.missionPhotos img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.section {
+  padding-block: var(--space-5);
+}
+
+.sectionAlt {
+  background: #fafafa;
+}
+
+.quotes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 800px) {
+  .quotes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.quote {
+  display: flex;
+  gap: var(--space-2);
+  border-left: 3px solid var(--color-yellow);
+  padding-left: var(--space-2);
+  font-style: italic;
+}
+
+.quotePhoto {
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 2px;
+}
+
+.quoteAuthor {
+  display: block;
+  margin-top: var(--space-1);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.goals {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.goal {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  border: 2px solid var(--color-black);
+  border-radius: 999px;
+  padding: 10px 24px;
+}
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 700px) {
+  .portfolioGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .portfolioGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.portfolioCard {
+  border: 1px solid #e5e5e5;
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.portfolioCardTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--color-black);
+}
+
+.portfolioCardTitle::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--color-yellow);
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.audienceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 700px) {
+  .audienceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.audienceItem {
+  padding: var(--space-2);
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.announcement {
+  background: var(--color-yellow);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 700px) {
+  .teamGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.teamCard {
+  text-align: center;
+}
+
+.teamPhoto {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.teamName {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.teamRole {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.teamSocial {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--color-black);
+  border-bottom: 1px solid var(--color-yellow);
+}
+
+.surveyParagraphs p {
+  line-height: 1.7;
+  margin: 0 0 1em;
+  max-width: 70ch;
+}
+
+.addressGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 700px) {
+  .addressGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.addressCard {
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid #eee;
+}
+
+.addressCardLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #999;
+  margin-bottom: 6px;
+}

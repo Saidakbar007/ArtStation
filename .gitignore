@@ -1,0 +1,10 @@
+node-modules
+dist
+dist-ssr
+*.local
+.DS_Store
+*.tsbuildinfo
+
+# Source materials (large files, not part of the deployed site)
+ArtStation.book/
+reference hero/

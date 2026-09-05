@@ -1,0 +1,331 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+/* --- Тёмная зона: wordmark --- */
+.wordmarkZone {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 68%;
+  display: flex;
+  flex-direction: column;
+  /* запас сверху хотя бы в высоту sticky-хедера — иначе при скролле
+     навбар наезжает на текст, т.к. Hero-секция уезжает под него */
+  padding-top: calc(var(--header-height) + var(--space-3));
+  padding-bottom: var(--space-3);
+  padding-left: clamp(1.25rem, 5vw, 4rem);
+  padding-right: var(--space-3);
+  box-sizing: border-box;
+}
+
+/* kicker + wordmark + статистика — единая группа, отцентрированная по
+   высоте всей зоны через justify-content (группа растягивается на
+   оставшееся место через flex: 1, индикатор прокрутки остаётся внизу). */
+.wordmarkGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+  animation: wordmarkReveal 5500ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.kicker {
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  font-weight: 500;
+  color: rgba(220, 220, 220, 0.6);
+  max-width: 34ch;
+  margin: 0 0 var(--space-2);
+  line-height: 1.4;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.96;
+  letter-spacing: -0.01em;
+  color: rgba(235, 235, 235, 0.92);
+  font-size: clamp(2.4rem, 6.5vw, 5.5rem);
+  max-width: 14ch;
+}
+
+@keyframes wordmarkReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    clip-path: inset(0 100% 0 0);
+  }
+  40% {
+    opacity: 1;
+    clip-path: inset(0 100% 0 0);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0% 0 0);
+  }
+}
+
+/* --- Строка статистики --- */
+.statsLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: var(--space-3);
+  font-size: 0.85rem;
+  color: rgba(220, 220, 220, 0.55);
+}
+
+.statsItem {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.statsValue {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: rgba(235, 235, 235, 0.85);
+  margin-right: 0.35em;
+}
+
+.statsDivider {
+  display: inline-block;
+  width: 1px;
+  height: 0.9em;
+  background: rgba(220, 220, 220, 0.3);
+  margin: 0 var(--space-2);
+}
+
+/* --- Индикатор прокрутки --- */
+.scrollHint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(220, 220, 220, 0.4);
+}
+
+.scrollArrow {
+  display: inline-block;
+  animation: scrollBounce 2200ms ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* --- Фото-зона: дуотон-фото события --- */
+.photoZone {
+  position: relative;
+  flex: 1 1 32%;
+  overflow: hidden;
+}
+
+/* Стек всех 6 фото разворота "Portfolio" — как в книге, друг под другом,
+   без зазоров, каждое высотой пропорционально оригиналу (flex задаётся
+   инлайн в Hero.tsx). */
+.photoStack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  animation: photoStackReveal 6000ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.photoImg {
+  width: 100%;
+  min-height: 0;
+  object-fit: cover;
+  /* настоящий дуотон (тени → света) через SVG feComponentTransfer,
+     см. src/components/DuotoneFilter.tsx — не плоский CSS-фильтр */
+  filter: url(#hero-duotone);
+}
+
+/* Медленный "Ken Burns" наплыв на весь стек сразу — не на каждое фото
+   по отдельности, иначе получится 6 несинхронных дёрганий вместо
+   одного цельного движения. */
+@keyframes photoStackReveal {
+  from {
+    opacity: 0;
+    transform: scale(1.12);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* мягкое перетекание фото в тёмную зону вместо жёсткой границы */
+.fadeEdge {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to right, var(--color-black) 0%, rgba(10, 10, 10, 0) 20%);
+}
+
+/* halftone-паттерн с обложки — только в углу, как деталь-подпись бренда */
+.patternCorner {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: min(220px, 46%);
+  height: min(220px, 46%);
+  opacity: 0.6;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle at 100% 100%, black 0%, black 30%, transparent 72%);
+  mask-image: radial-gradient(circle at 100% 100%, black 0%, black 30%, transparent 72%);
+}
+
+.patternCorner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom right;
+}
+
+/* --- Подпись события --- */
+.caption {
+  position: absolute;
+  z-index: 3;
+  left: 8%;
+  bottom: 9%;
+  max-width: min(260px, 80%);
+  background: rgba(10, 10, 10, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-left: 3px solid var(--color-yellow);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.85rem;
+}
+
+.captionStatus {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-yellow);
+  margin-bottom: 4px;
+}
+
+.captionTitle {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.captionDate {
+  display: block;
+  font-size: 0.72rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--color-yellow);
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wordmarkGroup,
+  .photoStack,
+  .scrollArrow {
+    animation: none;
+  }
+}
+
+/* --- Мобильные: фото full-bleed под текстом, без сложной компоновки --- */
+@media (max-width: 760px) {
+  .hero {
+    display: block;
+    min-height: 100vh;
+  }
+
+  .photoZone {
+    position: absolute;
+    inset: 0;
+    flex: none;
+  }
+
+  .fadeEdge {
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.5) 0%, rgba(10, 10, 10, 0.75) 100%);
+  }
+
+  .patternCorner {
+    display: none;
+  }
+
+  .wordmarkZone {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    flex: none;
+    /* та же защита от sticky-хедера, только с меньшим базовым отступом */
+    padding-top: calc(var(--header-height) + var(--space-4));
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
+
+  .wordmarkGroup {
+    flex: 1;
+  }
+
+  .kicker {
+    max-width: none;
+    text-align: center;
+  }
+
+  .wordmark {
+    max-width: none;
+    text-align: center;
+  }
+
+  .statsLine {
+    justify-content: center;
+  }
+
+  /* На мобильном индикатор прокрутки конфликтует с карточкой подписи
+     события внизу экрана — свайп там и так очевиден. */
+  .scrollHint {
+    display: none;
+  }
+
+  .caption {
+    left: var(--space-2);
+    right: var(--space-2);
+    bottom: var(--space-3);
+    max-width: none;
+  }
+}

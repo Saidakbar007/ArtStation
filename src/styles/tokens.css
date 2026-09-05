@@ -1,0 +1,68 @@
+/*
+  Значения проверены напрямую по официальному годовому отчёту
+  ART_STATION_AnnualReport24-25 (EN).pdf — рендером страниц и замером
+  цвета пикселей, а не по текстовому описанию. Отличия от исходного
+  брифа отмечены явно.
+*/
+
+:root {
+  /* --- Базовые цвета бренда --- */
+  --color-black: #1a1a1a; /* реальный "чёрный" фона в отчёте — не чистый #0A0A0A */
+  --color-white: #ffffff;
+  --color-yellow: #ffcc00; /* реальный фирменный жёлтый — не #FFD400 из брифа */
+
+  /* Декоративный halftone-паттерн на обложке (синий/индиго по жёлтому) */
+  --color-indigo: #4548a3;
+
+  /* --- Цветовое кодирование разделов программы (взято с титульных страниц) --- */
+  --color-section-education: #ffcc00; /* Cultural Education — использует основной жёлтый */
+  --color-section-exhibitions: #97cbd0; /* Art Exhibitions — циан/бирюза */
+  --color-section-residencies: #bca3ce; /* Art Residencies — сирень */
+  --color-section-partnership: #b7d58f; /* International Partnership — зелёный */
+  /* TODO(design): цвета разделов "Cultural Events" и "Educational Programs"
+     не удалось надёжно снять с чистой страницы-разделителя (попадались только
+     фотостраницы). Уточнить при следующем проходе по PDF, пока не назначены. */
+
+  /* --- Типографика ---
+     В PDF используется коммерческий шрифт TT Wellingtons (Regular/Medium/
+     Bold/MediumItalic от TypeType) — лицензии на веб нет, поэтому берём
+     ближайший по духу гарнитуре бесплатный шрифт с Google Fonts: Poppins
+     (геометричный, широкие пропорции, дружелюбные округлые формы — близко
+     к оригиналу). Для длинного текста статей — Inter, он читабельнее в
+     мелком кегле, чем Poppins. */
+  --font-display: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Шкала размеров шрифта — 5 уровней иерархии */
+  --font-size-hero: clamp(2.5rem, 5vw + 1rem, 5rem);
+  --font-size-h1: clamp(2rem, 3vw + 1rem, 3.25rem);
+  --font-size-h2: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+  --font-size-h3: clamp(1.125rem, 1vw + 1rem, 1.5rem);
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+
+  /* --- Отступы (базовая сетка 8px) --- */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --space-7: 6rem;
+
+  /* --- Сетка/контейнер --- */
+  --container-max: 1280px;
+  --container-padding: clamp(1rem, 4vw, 3rem);
+
+  /* Высота хедера — используется, чтобы Hero точно занимал остаток экрана (100vh - header) */
+  --header-height: 72px;
+
+  /* --- Kinetic-акценты: hover и motion --- */
+  --transition-fast: 180ms ease;
+  --transition-medium: 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  --hover-scale: 1.03;
+
+  /* --- Скругления --- */
+  --radius-sm: 2px;
+  --radius-md: 6px;
+}

@@ -1,0 +1,26 @@
+.wrap {
+  margin-bottom: var(--space-4);
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--color-black);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 3px solid var(--color-yellow);
+  padding-bottom: 4px;
+  margin-bottom: var(--space-2);
+}
+
+.title {
+  font-size: var(--font-size-h1);
+}
+
+.subtitle {
+  margin-top: var(--space-1);
+  color: #666;
+  max-width: 60ch;
+  font-size: 1rem;
+}

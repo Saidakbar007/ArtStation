@@ -1,0 +1,79 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 480px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.input,
+.textarea {
+  border: 1px solid #ccc;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-yellow);
+}
+
+.inputError {
+  border-color: #d33;
+}
+
+.errorText {
+  font-size: 0.8rem;
+  color: #d33;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit {
+  margin-top: var(--space-1);
+  background: var(--color-black);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 12px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  align-self: flex-start;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.success {
+  border: 1px solid var(--color-yellow);
+  background: #fffbe6;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+}

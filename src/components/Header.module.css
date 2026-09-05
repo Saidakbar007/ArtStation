@@ -1,0 +1,139 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-white);
+  border-bottom: 1px solid #eee;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-2);
+  min-height: var(--header-height);
+  box-sizing: border-box;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: var(--color-black);
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.logoDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-yellow);
+  display: inline-block;
+}
+
+.nav {
+  display: none;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .nav {
+    display: flex;
+  }
+}
+
+.navLink {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--color-black);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--color-yellow);
+  transition: width var(--transition-fast);
+}
+
+.navLink:hover::after,
+.navLinkActive::after {
+  width: 100%;
+}
+
+.navLinkActive {
+  font-weight: 600;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.langSwitch {
+  display: flex;
+  gap: 2px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-md);
+  padding: 2px;
+}
+
+.langButton {
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: #888;
+}
+
+.langButtonActive {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.burger {
+  display: inline-flex;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 8px;
+}
+
+@media (min-width: 800px) {
+  .burger {
+    display: none;
+  }
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--container-padding) var(--space-4);
+  border-top: 1px solid #eee;
+}
+
+.mobileNavLink {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--color-black);
+}

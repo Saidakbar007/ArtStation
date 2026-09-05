@@ -1,0 +1,69 @@
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+  font: inherit;
+}
+
+.imageWrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #f2f2f2;
+  border-radius: var(--radius-md);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-medium);
+}
+
+.card:hover .image {
+  transform: scale(var(--hover-scale));
+}
+
+.liveBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--color-white);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: var(--space-2);
+  font-size: 0.8rem;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-top: 6px;
+  line-height: 1.25;
+  background-image: linear-gradient(var(--color-yellow), var(--color-yellow));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size var(--transition-medium);
+  display: inline;
+}
+
+.card:hover .title {
+  background-size: 100% 2px;
+}
