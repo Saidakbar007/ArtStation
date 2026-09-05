@@ -73,7 +73,11 @@ export function pickFeaturedEvent<T extends { startDate: string; endDate?: strin
 
   const past = withStatus.filter((e) => e.status === 'past')
   if (past.length > 0) {
-    past.sort((a, b) => new Date(b.event.startDate).getTime() - new Date(a.event.startDate).getTime())
+    // "Самое недавнее прошлое" — по дате завершения, а не начала: иначе
+    // однодневное событие, начавшееся позже, обходит длящуюся неделями
+    // выставку, которая на самом деле закончилась позже него.
+    const effectiveEnd = (e: T) => new Date(e.endDate ?? e.startDate).getTime()
+    past.sort((a, b) => effectiveEnd(b.event) - effectiveEnd(a.event))
     return past[0]
   }
 

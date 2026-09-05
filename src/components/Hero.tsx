@@ -1,20 +1,18 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { fullEvents } from '../data/events'
+import { events } from '../data/events'
 import { stats } from '../data/stats'
 import { useLanguage } from '../i18n/LanguageContext'
 import { pickText } from '../utils/localize'
 import { formatDateRange, pickFeaturedEvent } from '../utils/date'
 import { DuotoneFilter } from './DuotoneFilter'
+import { EventModal } from './EventModal'
+import type { Event } from '../types'
 import styles from './Hero.module.css'
 
 // Три показателя из Key Indicators (см. data/stats.ts) для краткой
 // строки статистики под wordmark.
 const heroStatIds = ['events', 'countries', 'visitors'] as const
-
-// Фото для Hero берём только у "полных" событий (EventFull) — у них
-// гарантированно есть реальное фото из отчёта. У EventShort фото либо
-// плейсхолдер, либо его нет вовсе.
-const fullEventsWithRealPhoto = fullEvents.filter((e) => !e.coverImage.startsWith('https://placehold.co'))
 
 // Разворот "Portfolio" (стр. 5 годового отчёта) — те же 6 фото, в том же
 // порядке и с теми же пропорциями высоты, что и в книге, сложены в
@@ -30,7 +28,11 @@ const portfolioPhotos = [
 
 export function Hero() {
   const { language, t } = useLanguage()
-  const featured = pickFeaturedEvent(fullEventsWithRealPhoto)
+  const [modalEvent, setModalEvent] = useState<Event | null>(null)
+  // Фото Hero — фиксированный разворот книги (portfolioPhotos ниже), не
+  // зависит от события, поэтому в кандидаты на подпись берём вообще все
+  // события, включая короткие (EventShort) без отдельной страницы.
+  const featured = pickFeaturedEvent(events)
 
   const statusLabel = featured
     ? featured.status === 'ongoing'
@@ -95,19 +97,29 @@ export function Hero() {
           <div className={styles.patternCorner}>
             <img src="/images/hero/cover-pattern.webp" alt="" />
           </div>
+        </div>
+      )}
 
-          <div className={styles.caption}>
-            <span className={styles.captionStatus}>{statusLabel}</span>
-            <span className={styles.captionTitle}>{pickText(featured.event.title, language)}</span>
-            <span className={styles.captionDate}>
-              {formatDateRange(featured.event.startDate, featured.event.endDate, language)}
-            </span>
+      {featured && (
+        <div className={styles.caption}>
+          <span className={styles.captionStatus}>{statusLabel}</span>
+          <span className={styles.captionTitle}>{pickText(featured.event.title, language)}</span>
+          <span className={styles.captionDate}>
+            {formatDateRange(featured.event.startDate, featured.event.endDate, language)}
+          </span>
+          {featured.event.hasFullContent ? (
             <Link to={`/events/${featured.event.id}`} className={styles.cta}>
               {t.hero.viewDetails[language]}
             </Link>
-          </div>
+          ) : (
+            <button type="button" className={styles.cta} onClick={() => setModalEvent(featured.event)}>
+              {t.hero.viewDetails[language]}
+            </button>
+          )}
         </div>
       )}
+
+      {modalEvent && <EventModal event={modalEvent} onClose={() => setModalEvent(null)} />}
     </section>
   )
 }

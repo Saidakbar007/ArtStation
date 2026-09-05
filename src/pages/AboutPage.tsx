@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
 import { SectionHeading } from '../components/SectionHeading'
 import { Reveal } from '../components/Reveal'
@@ -14,6 +15,16 @@ import {
 import { team } from '../data/team'
 import styles from './AboutPage.module.css'
 
+// Реальные цвета цветовой кодировки разделов программы из отчёта
+// (см. --color-section-* в tokens.css) — используются циклически для
+// карточек аудитории, чтобы "красочность" была на бренде, а не случайной.
+const audienceColors = [
+  'var(--color-section-education)',
+  'var(--color-section-exhibitions)',
+  'var(--color-section-residencies)',
+  'var(--color-section-partnership)',
+]
+
 export function AboutPage() {
   const { language, t } = useLanguage()
 
@@ -23,13 +34,13 @@ export function AboutPage() {
         <div className="container">
           <div className={styles.hero}>
             <SectionHeading eyebrow="Art Station" title={t.about.title[language]} />
-            <div className={styles.heroRow}>
+            <div className={styles.splitRow}>
               <p className={styles.heroText}>{foreword.intro[language]}</p>
               <img
                 src="/images/about/inverted-visions-team.webp"
                 alt=""
                 loading="lazy"
-                className={styles.heroPhoto}
+                className={styles.splitPhoto}
               />
             </div>
           </div>
@@ -37,15 +48,15 @@ export function AboutPage() {
           <div className={styles.quotes}>
             <blockquote className={styles.quote}>
               <img src={foreword.directorPhoto} alt={foreword.directorName} loading="lazy" className={styles.quotePhoto} />
-              <div>
-                «{foreword.directorQuote[language]}»
+              <div className={styles.quoteBody}>
+                <p className={styles.quoteTextLine}>«{foreword.directorQuote[language]}»</p>
                 <span className={styles.quoteAuthor}>{foreword.directorName}</span>
               </div>
             </blockquote>
             <blockquote className={styles.quote}>
               <img src={foreword.ministerPhoto} alt={foreword.ministerName} loading="lazy" className={styles.quotePhoto} />
-              <div>
-                «{foreword.ministerQuote[language]}»
+              <div className={styles.quoteBody}>
+                <p className={styles.quoteTextLine}>«{foreword.ministerQuote[language]}»</p>
                 <span className={styles.quoteAuthor}>{foreword.ministerName}</span>
               </div>
             </blockquote>
@@ -56,7 +67,9 @@ export function AboutPage() {
       <Reveal>
         <section className={`${styles.section} ${styles.sectionAlt}`}>
           <div className="container">
-            <SectionHeading title={t.about.missionTitle[language]} />
+            <div className={styles.missionHeadingShift}>
+              <SectionHeading title={t.about.missionTitle[language]} />
+            </div>
             <div className={styles.missionRow}>
               <div>
                 <p className={styles.heroText}>{mission[language]}</p>
@@ -100,10 +113,16 @@ export function AboutPage() {
           <div className="container">
             <SectionHeading title={audienceTitle[language]} />
             <div className={styles.audienceGrid}>
-              {audience.map((item) => (
-                <div key={item.en} className={styles.audienceItem}>
-                  {item[language]}
-                </div>
+              {audience.map((item, i) => (
+                <Reveal key={item.en} delay={i * 80}>
+                  <div
+                    className={styles.audienceItem}
+                    style={{ '--accent': audienceColors[i % audienceColors.length] } as CSSProperties}
+                  >
+                    <span className={styles.audienceIndex}>{String(i + 1).padStart(2, '0')}</span>
+                    <p className={styles.audienceText}>{item[language]}</p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -114,10 +133,18 @@ export function AboutPage() {
         <section className={styles.section}>
           <div className="container">
             <SectionHeading title={survey.title[language]} />
-            <div className={styles.surveyParagraphs}>
-              {survey.paragraphs.map((p, i) => (
-                <p key={i}>{p[language]}</p>
-              ))}
+            <div className={`${styles.splitRow} ${styles.splitRowReverse}`}>
+              <img
+                src="/images/about/cultural-leaders-lab.webp"
+                alt=""
+                loading="lazy"
+                className={styles.splitPhoto}
+              />
+              <div className={styles.surveyParagraphs}>
+                {survey.paragraphs.map((p, i) => (
+                  <p key={i}>{p[language]}</p>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -126,8 +153,18 @@ export function AboutPage() {
       <Reveal>
         <section className={`${styles.section} ${styles.sectionAlt}`}>
           <div className="container">
-            <SectionHeading title={t.about.historyTitle[language]} />
-            <p style={{ maxWidth: '70ch', lineHeight: 1.7 }}>{t.about.historyText[language]}</p>
+            <div className={`${styles.splitRow} ${styles.historyRow}`}>
+              <div>
+                <SectionHeading title={t.about.historyTitle[language]} />
+                <p className={styles.heroText}>{t.about.historyText[language]}</p>
+              </div>
+              <img
+                src="/images/about/inevitability-sculpture.webp"
+                alt=""
+                loading="lazy"
+                className={`${styles.splitPhoto} ${styles.historyPhoto}`}
+              />
+            </div>
 
             <div className={styles.addressGrid}>
               <div className={styles.addressCard}>

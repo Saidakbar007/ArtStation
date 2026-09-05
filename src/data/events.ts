@@ -1070,7 +1070,7 @@ const shortEventInputs: ShortEventInput[] = [
   { title: 'Mapping Third Space in Housing Micro-Districts Workshop', type: 'workshop', start: '2026-03-23', end: '2026-03-29' },
   { title: 'Presentation of the Documentary Film "Threads of Support"', type: 'professionalDevelopment', start: '2026-03-27', end: '2026-04-08' },
   { title: 'FALAK: Song of Water and Land', type: 'exhibition', start: '2026-04-22', end: '2026-04-24' },
-  { title: 'Marionettes', type: 'exhibition', start: '2026-05-20', end: '2026-07-31' },
+  { title: 'Marionettes', type: 'exhibition', start: '2026-05-20', end: '2026-08-15' },
   { title: 'Digital Art & Animation Workshop', type: 'workshop', start: '2026-05-21', end: '2026-05-24' },
   { title: 'Art Archive of Uzbekistan. Episode 1 — Tulagyan Erkulov', type: 'digitalArchive', start: '2026-06-22' },
 ]

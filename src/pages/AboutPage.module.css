@@ -2,7 +2,9 @@
   padding-block: var(--space-5) var(--space-4);
 }
 
-.heroRow {
+/* Общий паттерн "текст слева / фото справа", переиспользуется в hero,
+   "Результаты опроса" и "История и текущий статус". */
+.splitRow {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-4);
@@ -11,8 +13,14 @@
 }
 
 @media (min-width: 800px) {
-  .heroRow {
+  .splitRow {
     grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  /* Фото слева, текст справа — зеркалим пропорции колонок вместе с
+     порядком содержимого. */
+  .splitRowReverse {
+    grid-template-columns: 0.9fr 1.1fr;
   }
 }
 
@@ -21,11 +29,32 @@
   line-height: 1.7;
 }
 
-.heroPhoto {
+.splitPhoto {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: var(--radius-md);
+}
+
+/* Заголовок с текстом и фото выравниваются по верхнему краю — так
+   "История и текущий статус" оказывается ровно на уровне, где
+   начинается фото, а не выше него с пустым просветом. */
+.historyRow {
+  align-items: start;
+}
+
+/* Фото "История и текущий статус" — чуть левее относительно базового
+   splitPhoto. */
+.historyPhoto {
+  margin-left: -13px;
+}
+
+/* Только вниз — по горизонтали заголовок должен остаться на одном
+   уровне с текстом миссии под ним (как "О нас" с параграфом ниже),
+   а не съезжать вправо от него. */
+.missionHeadingShift {
+  position: relative;
+  top: clamp(6px, 1.5vw, 18px);
 }
 
 .missionRow {
@@ -93,9 +122,24 @@
   margin-top: 2px;
 }
 
+/* Растягивается на всю высоту стретченного blockquote (оба блока в
+   строке грида одной высоты) и прижимает автора к низу — иначе при
+   разной длине цитат подписи "Дона Кулматова" и "Азиз Абдухакимов —
+   министр..." оказываются на разной высоте. */
+.quoteBody {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.quoteTextLine {
+  margin: 0;
+}
+
 .quoteAuthor {
   display: block;
-  margin-top: var(--space-1);
+  margin-top: auto;
+  padding-top: var(--space-1);
   font-style: normal;
   font-weight: 600;
   font-size: 0.85rem;
@@ -163,7 +207,7 @@
 .audienceGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-2);
+  gap: var(--space-3);
   margin-top: var(--space-3);
 }
 
@@ -173,12 +217,64 @@
   }
 }
 
+@media (min-width: 1100px) {
+  .audienceGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Цвет берётся из --accent, заданного инлайн в AboutPage.tsx (цикл по
+   реальным цветам разделов программы отчёта — не случайная палитра). */
 .audienceItem {
-  padding: var(--space-2);
+  position: relative;
+  height: 100%;
+  padding: var(--space-3) var(--space-2) var(--space-2);
   background: var(--color-white);
   border-radius: var(--radius-md);
   border: 1px solid #eee;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition:
+    transform var(--transition-medium),
+    box-shadow var(--transition-medium),
+    border-color var(--transition-medium);
+}
+
+.audienceItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--accent, var(--color-yellow));
+}
+
+.audienceItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+}
+
+.audienceIndex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: var(--space-2);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent, var(--color-yellow)) 35%, white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-black);
+}
+
+.audienceText {
+  margin: 0;
   font-size: 0.9rem;
+  line-height: 1.55;
 }
 
 .announcement {
