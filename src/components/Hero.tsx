@@ -18,12 +18,12 @@ const heroStatIds = ['events', 'countries', 'visitors'] as const
 // порядке и с теми же пропорциями высоты, что и в книге, сложены в
 // вертикальный стек вместо одного фото события.
 const portfolioPhotos = [
-  { src: '/images/hero/hero-exhibition.webp', ratio: 237 },
-  { src: '/images/hero/hero-residencies.webp', ratio: 338 },
-  { src: '/images/hero/hero-education.webp', ratio: 171 },
-  { src: '/images/hero/hero-art-interventions.webp', ratio: 172 },
-  { src: '/images/hero/hero-research.webp', ratio: 171 },
-  { src: '/images/hero/hero-spaces.webp', ratio: 216 },
+  { src: 'images/hero/hero-exhibition.webp', ratio: 237 },
+  { src: 'images/hero/hero-residencies.webp', ratio: 338 },
+  { src: 'images/hero/hero-education.webp', ratio: 171 },
+  { src: 'images/hero/hero-art-interventions.webp', ratio: 172 },
+  { src: 'images/hero/hero-research.webp', ratio: 171 },
+  { src: 'images/hero/hero-spaces.webp', ratio: 216 },
 ]
 
 export function Hero() {
@@ -95,7 +95,7 @@ export function Hero() {
           </div>
           <div className={styles.fadeEdge} />
           <div className={styles.patternCorner}>
-            <img src="/images/hero/cover-pattern.webp" alt="" />
+            <img src="images/hero/cover-pattern.webp" alt="" />
           </div>
         </div>
       )}

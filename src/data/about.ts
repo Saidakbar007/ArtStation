@@ -31,14 +31,14 @@ export const foreword: {
     en: 'Educational, cultural, and environmental initiatives lay the groundwork for sustainable development, help young people realize their potential, and strengthen the professional community.',
   },
   ministerName: 'Азиз Абдухакимов — министр экологии, охраны окружающей среды и изменения климата Республики Узбекистан',
-  ministerPhoto: '/images/about/aziz-abdukhakimov.webp',
+  ministerPhoto: 'images/about/aziz-abdukhakimov.webp',
   directorQuote: {
     ru: 'Когда у тебя сильная команда и надёжная поддержка, можно добиться многого! Для меня Art Station — это, прежде всего, пространство для обучения и обмена знаниями, где я расту вместе с командой и где рождаются новые возможности для профессионального развития и открытого диалога. Всё, чего мы достигли, стало возможным благодаря нашей команде и поддержке наших партнёров.',
     uz: "Kuchli jamoa va ishonchli qo'llab-quvvatlash bo'lsa, katta natijalarga erishish mumkin! Men uchun Art Station — bu, avvalambor, o'rganish va bilim almashish maydoni, u yerda men jamoam bilan birga o'sib boraman va professional rivojlanish hamda ochiq muloqot uchun yangi imkoniyatlar yaratiladi. Biz erishgan barcha natijalar jamoamiz va hamkorlarimiz qo'llab-quvvatlashi tufayli mumkin bo'ldi.",
     en: 'When you have a strong team and reliable support, you can achieve great things! For me, Art Station is, above all, a space for learning and knowledge sharing, where I grow together with the team, and where new opportunities for professional development and open dialogue are created. Everything we have accomplished has been made possible thanks to our team and the support of our partners.',
   },
   directorName: 'Дона Кулматова — директор Art Station',
-  directorPhoto: '/images/about/dona-kulmatova.webp',
+  directorPhoto: 'images/about/dona-kulmatova.webp',
 }
 
 export const mission: LocalizedText = {

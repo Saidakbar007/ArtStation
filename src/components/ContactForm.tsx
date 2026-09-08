@@ -10,6 +10,14 @@ interface Errors {
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
+// Сайт полностью статический (нет backend/сервера), поэтому "тихая"
+// отправка через API невозможна без стороннего сервиса вроде EmailJS
+// или Formspree (а для них нужен аккаунт и ключи, которые есть только
+// у владельца сайта). mailto: — единственный способ реально доставить
+// заявку без бэкенда: открывает почтовый клиент посетителя с уже
+// заполненным письмом на этот адрес, отправку он подтверждает сам.
+const CONTACT_EMAIL = 'amirshax0914@gmail.com'
+
 export function ContactForm() {
   const { language, t } = useLanguage()
   const [name, setName] = useState('')
@@ -34,11 +42,15 @@ export function ContactForm() {
     if (Object.keys(next).length > 0) return
 
     setStatus('sending')
-    // TODO: подключить реальную отправку (email/Telegram-бот), когда
-    // появится backend. Пока форма только имитирует отправку.
+
+    const subject = `Сообщение с сайта Art Station — ${name}`
+    const body = `Имя: ${name}\nEmail: ${email}\n\n${message}`
+    const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+
     window.setTimeout(() => {
+      window.location.href = mailtoUrl
       setStatus('success')
-    }, 800)
+    }, 500)
   }
 
   if (status === 'success') {

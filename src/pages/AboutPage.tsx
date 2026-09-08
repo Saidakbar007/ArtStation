@@ -37,7 +37,7 @@ export function AboutPage() {
             <div className={styles.splitRow}>
               <p className={styles.heroText}>{foreword.intro[language]}</p>
               <img
-                src="/images/about/inverted-visions-team.webp"
+                src="images/about/inverted-visions-team.webp"
                 alt=""
                 loading="lazy"
                 className={styles.splitPhoto}
@@ -82,10 +82,10 @@ export function AboutPage() {
                 </div>
               </div>
               <div className={styles.missionPhotos}>
-                <img src="/images/about/research-program-sketchbook.webp" alt="" loading="lazy" />
-                <img src="/images/about/research-program-tablet.webp" alt="" loading="lazy" />
-                <img src="/images/about/research-program-map.webp" alt="" loading="lazy" />
-                <img src="/images/about/research-program-studio.webp" alt="" loading="lazy" />
+                <img src="images/about/research-program-sketchbook.webp" alt="" loading="lazy" />
+                <img src="images/about/research-program-tablet.webp" alt="" loading="lazy" />
+                <img src="images/about/research-program-map.webp" alt="" loading="lazy" />
+                <img src="images/about/research-program-studio.webp" alt="" loading="lazy" />
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@ export function AboutPage() {
             <SectionHeading title={survey.title[language]} />
             <div className={`${styles.splitRow} ${styles.splitRowReverse}`}>
               <img
-                src="/images/about/cultural-leaders-lab.webp"
+                src="images/about/cultural-leaders-lab.webp"
                 alt=""
                 loading="lazy"
                 className={styles.splitPhoto}
@@ -159,7 +159,7 @@ export function AboutPage() {
                 <p className={styles.heroText}>{t.about.historyText[language]}</p>
               </div>
               <img
-                src="/images/about/inevitability-sculpture.webp"
+                src="images/about/inevitability-sculpture.webp"
                 alt=""
                 loading="lazy"
                 className={`${styles.splitPhoto} ${styles.historyPhoto}`}
