@@ -10,7 +10,7 @@
   top: 8px;
   bottom: 8px;
   width: 2px;
-  background: #e2e2e2;
+  background: var(--border);
 }
 
 .yearGroup {
@@ -35,7 +35,7 @@
   height: 16px;
   border-radius: 50%;
   background: var(--color-yellow);
-  border: 2px solid var(--color-black);
+  border: 2px solid var(--ink);
 }
 
 .item {
@@ -63,7 +63,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #bbb;
+  background: var(--text-subtle);
 }
 
 .item:hover::before {
@@ -76,7 +76,7 @@
   height: 56px;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  background: #f2f2f2;
+  background: var(--surface-sunken);
 }
 
 .thumb img {
@@ -92,7 +92,7 @@
 
 .date {
   font-size: 0.75rem;
-  color: #888;
+  color: var(--text-subtle);
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
@@ -116,7 +116,7 @@
 .typeBadge {
   flex: 0 0 auto;
   font-size: 0.7rem;
-  color: #999;
+  color: var(--text-subtle);
   text-transform: uppercase;
   letter-spacing: 0.03em;
   white-space: nowrap;

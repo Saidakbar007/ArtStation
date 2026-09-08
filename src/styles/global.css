@@ -13,12 +13,13 @@ body {
 }
 
 body {
-  background: var(--color-white);
-  color: var(--color-black);
+  background: var(--bg);
+  color: var(--ink);
   font-family: var(--font-body);
   font-size: var(--font-size-body);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 h1,

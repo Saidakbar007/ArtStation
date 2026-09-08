@@ -100,7 +100,7 @@ export function AboutPage() {
               {portfolio.map((item) => (
                 <div key={item.title.en} className={styles.portfolioCard}>
                   <div className={styles.portfolioCardTitle}>{item.title[language]}</div>
-                  <p style={{ fontSize: '0.9rem', lineHeight: 1.6, color: '#444' }}>{item.text[language]}</p>
+                  <p style={{ fontSize: '0.9rem', lineHeight: 1.6, color: 'var(--text-muted)' }}>{item.text[language]}</p>
                 </div>
               ))}
             </div>
@@ -194,16 +194,7 @@ export function AboutPage() {
                 <div key={member.id} className={styles.teamCard}>
                   <img src={member.photo} alt={member.name} loading="lazy" className={styles.teamPhoto} />
                   <div className={styles.teamName}>{member.name}</div>
-                  <div className={styles.teamRole}>
-                    {member.role.includes('Volunteer')
-                      ? `${member.role.replace(' (Volunteer)', '')} · ${t.about.volunteer[language]}`
-                      : member.role}
-                  </div>
-                  {member.social && (
-                    <a className={styles.teamSocial} href={member.social.url} target="_blank" rel="noreferrer">
-                      {member.social.label}
-                    </a>
-                  )}
+                  {member.role && <div className={styles.teamRole}>{member.role}</div>}
                 </div>
               ))}
             </div>

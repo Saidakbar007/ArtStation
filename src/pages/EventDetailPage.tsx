@@ -4,7 +4,7 @@ import { partners } from '../data/partners'
 import { artists } from '../data/artists'
 import { useLanguage } from '../i18n/LanguageContext'
 import { pickText } from '../utils/localize'
-import { formatDateRange } from '../utils/date'
+import { formatEventDate } from '../utils/date'
 import { EventTypeBadge } from '../components/EventTypeBadge'
 import { Reveal } from '../components/Reveal'
 import styles from './EventDetailPage.module.css'
@@ -46,7 +46,7 @@ export function EventDetailPage() {
 
         <div>
           <div className={styles.meta}>
-            <span>{formatDateRange(event.startDate, event.endDate, language)}</span>
+            <span>{formatEventDate(event, language)}</span>
             <EventTypeBadge type={event.type} />
           </div>
 

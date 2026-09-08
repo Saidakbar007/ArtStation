@@ -48,7 +48,6 @@ export function ContactPage() {
               <div className={styles.socialRow}>
                 <a className={styles.socialLink} href="https://www.instagram.com/artstationuz" target="_blank" rel="noreferrer">Instagram</a>
                 <a className={styles.socialLink} href="https://www.facebook.com/share/1AnG8G9mFb/?mibextid=LQQJ4d" target="_blank" rel="noreferrer">Facebook</a>
-                <a className={styles.socialLink} href="https://www.tiktok.com/@artstation.uz" target="_blank" rel="noreferrer">TikTok</a>
                 <a className={styles.socialLink} href="https://youtube.com/@artstation_uz" target="_blank" rel="noreferrer">YouTube</a>
               </div>
             </li>

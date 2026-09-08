@@ -66,3 +66,95 @@
   --radius-sm: 2px;
   --radius-md: 6px;
 }
+
+/* ============================================================
+   Семантические токены темы. Светлая тема — на голом :root,
+   тёмная — переопределяет только эти переменные (см. ниже).
+   --color-black / --color-white / --color-yellow остаются
+   константами бренда: их используют «всегда тёмные» блоки
+   (Hero, Footer, StatsBlock) и жёлтые плашки.
+   ============================================================ */
+:root {
+  color-scheme: light;
+
+  --bg: #ffffff;            /* фон страницы */
+  --surface: #ffffff;       /* карточки, поля ввода, модалки */
+  --surface-alt: #fafafa;   /* фон «полосатых» секций */
+  --surface-sunken: #f2f2f2;/* подложка под изображениями */
+
+  --ink: #1a1a1a;           /* основной текст и «тёмные» элементы UI */
+  --paper: #ffffff;         /* текст/иконка поверх --ink */
+  --text-muted: #666666;    /* вторичный текст */
+  --text-subtle: #8a8a8a;   /* подписи, мета, даты */
+
+  --border: #e3e3e3;
+  --border-hover: #1a1a1a;
+  --yellow-wash: #fffbe6;   /* жёлтый hover-фон */
+  --gold-ink: #806a00;      /* «золотой» текст (бейдж машинного перевода) */
+
+  --danger: #dd3333;
+
+  --shadow-sm: rgba(0, 0, 0, 0.1);
+  --shadow-md: rgba(0, 0, 0, 0.14);
+  --shadow-lg: rgba(0, 0, 0, 0.22);
+  --outline-num: rgba(0, 0, 0, 0.14);
+  --outline-num-hover: rgba(0, 0, 0, 0.22);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #121212;
+  --surface: #1c1c1e;
+  --surface-alt: #171718;
+  --surface-sunken: #262628;
+
+  --ink: #ededed;
+  --paper: #121212;
+  --text-muted: #a6a6a6;
+  --text-subtle: #7d7d7d;
+
+  --border: #333336;
+  --border-hover: #ededed;
+  --yellow-wash: rgba(255, 204, 0, 0.14);
+  --gold-ink: #e8c14d;
+
+  --danger: #ff6b6b;
+
+  --shadow-sm: rgba(0, 0, 0, 0.5);
+  --shadow-md: rgba(0, 0, 0, 0.55);
+  --shadow-lg: rgba(0, 0, 0, 0.6);
+  --outline-num: rgba(255, 255, 255, 0.14);
+  --outline-num-hover: rgba(255, 255, 255, 0.26);
+}
+
+/* Тёмная по системной настройке — только пока пользователь не выбрал
+   тему вручную (иначе выигрывает [data-theme]). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+
+    --bg: #121212;
+    --surface: #1c1c1e;
+    --surface-alt: #171718;
+    --surface-sunken: #262628;
+
+    --ink: #ededed;
+    --paper: #121212;
+    --text-muted: #a6a6a6;
+    --text-subtle: #7d7d7d;
+
+    --border: #333336;
+    --border-hover: #ededed;
+    --yellow-wash: rgba(255, 204, 0, 0.14);
+    --gold-ink: #e8c14d;
+
+    --danger: #ff6b6b;
+
+    --shadow-sm: rgba(0, 0, 0, 0.5);
+    --shadow-md: rgba(0, 0, 0, 0.55);
+    --shadow-lg: rgba(0, 0, 0, 0.6);
+    --outline-num: rgba(255, 255, 255, 0.14);
+    --outline-num-hover: rgba(255, 255, 255, 0.26);
+  }
+}

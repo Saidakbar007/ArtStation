@@ -79,7 +79,7 @@ export function HomePage() {
 
       {featuredPast.length > 0 && (
         <Reveal>
-          <section className={styles.section} style={{ background: '#fafafa' }}>
+          <section className={styles.section} style={{ background: 'var(--surface-alt)' }}>
             <div className="container">
               <SectionHeading title={t.home.samarkandTitle[language]} subtitle={t.home.samarkandSubtitle[language]} />
               <EventSlider events={featuredPast} />

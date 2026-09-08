@@ -28,7 +28,7 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #999;
+  color: var(--text-subtle);
   margin-bottom: 4px;
 }
 
@@ -48,21 +48,21 @@
 }
 
 .socialLink {
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 999px;
   padding: 6px 14px;
   font-size: 0.85rem;
   text-decoration: none;
-  color: var(--color-black);
+  color: var(--ink);
 }
 
 .socialLink:hover {
   border-color: var(--color-yellow);
-  background: #fffbe6;
+  background: var(--yellow-wash);
 }
 
 .todo {
-  color: #999;
+  color: var(--text-subtle);
   font-style: italic;
   font-size: 0.9rem;
 }

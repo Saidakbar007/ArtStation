@@ -18,13 +18,13 @@
 
 .input,
 .textarea {
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 10px 12px;
   font-family: var(--font-body);
   font-size: 1rem;
-  background: var(--color-white);
-  color: var(--color-black);
+  background: var(--surface);
+  color: var(--ink);
 }
 
 .input:focus,
@@ -34,12 +34,12 @@
 }
 
 .inputError {
-  border-color: #d33;
+  border-color: var(--danger);
 }
 
 .errorText {
   font-size: 0.8rem;
-  color: #d33;
+  color: var(--danger);
 }
 
 .textarea {
@@ -49,8 +49,8 @@
 
 .submit {
   margin-top: var(--space-1);
-  background: var(--color-black);
-  color: var(--color-white);
+  background: var(--ink);
+  color: var(--paper);
   border: none;
   border-radius: var(--radius-sm);
   padding: 12px 24px;
@@ -72,7 +72,8 @@
 
 .success {
   border: 1px solid var(--color-yellow);
-  background: #fffbe6;
+  background: var(--yellow-wash);
+  color: var(--ink);
   padding: var(--space-2);
   border-radius: var(--radius-md);
   font-weight: 500;

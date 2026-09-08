@@ -2,8 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--color-white);
-  border-bottom: 1px solid #eee;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
 }
 
 .bar {
@@ -21,7 +21,7 @@
   font-size: 1.25rem;
   letter-spacing: -0.02em;
   text-decoration: none;
-  color: var(--color-black);
+  color: var(--ink);
   display: flex;
   align-items: center;
   gap: 0.4em;
@@ -52,7 +52,7 @@
   font-weight: 500;
   font-size: 0.95rem;
   text-decoration: none;
-  color: var(--color-black);
+  color: var(--ink);
   position: relative;
   padding-bottom: 4px;
 }
@@ -86,7 +86,7 @@
 .langSwitch {
   display: flex;
   gap: 2px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 2px;
 }
@@ -100,18 +100,38 @@
   padding: 4px 8px;
   border-radius: var(--radius-sm);
   cursor: pointer;
-  color: #888;
+  color: var(--text-subtle);
 }
 
 .langButtonActive {
-  background: var(--color-black);
-  color: var(--color-white);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.themeToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.themeToggle:hover {
+  border-color: var(--color-yellow);
+  color: var(--color-yellow);
 }
 
 .burger {
   display: inline-flex;
   border: none;
   background: transparent;
+  color: var(--ink);
   cursor: pointer;
   padding: 8px;
 }
@@ -127,7 +147,8 @@
   flex-direction: column;
   gap: var(--space-2);
   padding: var(--space-2) var(--container-padding) var(--space-4);
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
 }
 
 .mobileNavLink {
@@ -135,5 +156,5 @@
   font-weight: 600;
   font-size: 1.25rem;
   text-decoration: none;
-  color: var(--color-black);
+  color: var(--ink);
 }

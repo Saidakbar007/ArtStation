@@ -2,54 +2,34 @@ import type { TeamMember } from '../types'
 import { placeholderAvatar } from '../utils/placeholder'
 
 /*
-  Реальные имена команды (раздел 3.5 брифа, подтверждены разработчиком).
-  Фото недоступны (мёртвый сервер api.artstation.uz) — используется
-  плейсхолдер-аватар до появления реальных фото в public/images/team/.
-  TODO: официальная статистика отчёта говорит о "15 team members" —
-  это агрегированное число всей команды за 3 года, оно не сводится к
-  этим 6 персональным карточкам, см. src/data/stats.ts.
+  Реальный состав команды (имена и фото подтверждены заказчиком,
+  сен. 2026). Роли указаны только там, где они известны точно:
+  - Дона Кулматова — директор (см. data/about.ts, foreword.directorName).
+  TODO(заказчику): прислать должности Асаль Байматовой, Абдумалика
+  Абруева, Дарьи Раскольниковой + подтвердить Наталью Думко и её фото.
+  У Абдумалика Абруева пока нет фото — фирменный плейсхолдер-аватар.
 */
 export const team: TeamMember[] = [
   {
-    id: 'dilshod-karimov',
-    name: 'Дилшод Каримов',
-    role: 'Project Manager',
-    photo: placeholderAvatar('Dilshod Karimov'),
-    social: { label: 'LinkedIn', url: 'https://linkedin.com/in/dilshodkarimov' },
+    id: 'dona-kulmatova',
+    name: 'Дона Кулматова',
+    role: 'Директор',
+    photo: 'images/team/dona-kulmatova.webp',
   },
   {
-    id: 'malika-rustamova',
-    name: 'Малика Рустамова',
-    role: 'Frontend Developer',
-    photo: placeholderAvatar('Malika Rustamova'),
-    social: { label: 'GitHub', url: 'https://github.com/malika-rustamova' },
+    id: 'asal-baymatova',
+    name: 'Асаль Байматова',
+    photo: 'images/team/asal-baymatova.webp',
   },
   {
-    id: 'javlonbek-islomov',
-    name: 'Жавлонбек Исламов',
-    role: 'Curator',
-    photo: placeholderAvatar('Javlonbek Islomov'),
-    social: { label: 'Instagram', url: 'https://instagram.com/javlonbek.islomov' },
+    id: 'abdumalik-abruev',
+    name: 'Абдумалик Абруев',
+    photo: placeholderAvatar('Abdumalik Abruev'),
   },
   {
-    id: 'aziza-tursunova',
-    name: 'Азиза Турсунова',
-    role: 'Event Assistant (Volunteer)',
-    photo: placeholderAvatar('Aziza Tursunova'),
-    social: { label: 'Telegram', url: 'https://t.me/aziza' },
-  },
-  {
-    id: 'bekzod-khudoyberdiev',
-    name: 'Бекзод Худойбердиев',
-    role: 'Translator (Volunteer)',
-    photo: placeholderAvatar('Bekzod Khudoyberdiev'),
-    social: { label: 'Instagram', url: 'https://instagram.com/bekzod.translator' },
-  },
-  {
-    id: 'shahnoza-karimova',
-    name: 'Шахноза Каримова',
-    role: 'Gallery Assistant (Volunteer)',
-    photo: placeholderAvatar('Shahnoza Karimova'),
-    social: { label: 'Facebook', url: 'https://facebook.com/shahnoza.karimova' },
+    id: 'darya-raskolnikova',
+    name: 'Дарья Раскольникова',
+    role: 'Фотограф',
+    photo: 'images/team/darya-raskolnikova.webp',
   },
 ]

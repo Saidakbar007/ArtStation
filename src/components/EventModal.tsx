@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import type { Event } from '../types'
 import { useLanguage } from '../i18n/LanguageContext'
 import { pickText } from '../utils/localize'
-import { formatDateRange } from '../utils/date'
+import { formatEventDate } from '../utils/date'
 import { EventTypeBadge } from './EventTypeBadge'
 import styles from './EventModal.module.css'
 
@@ -32,7 +32,7 @@ export function EventModal({ event, onClose }: { event: Event; onClose: () => vo
         <img src={event.coverImage} alt={pickText(event.title, language)} className={styles.image} />
         <div className={styles.body}>
           <div className={styles.meta}>
-            <span>{formatDateRange(event.startDate, event.endDate, language)}</span>
+            <span>{formatEventDate(event, language)}</span>
             <EventTypeBadge type={event.type} />
           </div>
           <h3 className={styles.title}>{pickText(event.title, language)}</h3>

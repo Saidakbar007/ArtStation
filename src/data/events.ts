@@ -1036,6 +1036,157 @@ export const fullEvents: EventFull[] = [
       en: 'April 1–11, 2025: Designer-artist Svetlana Sarjan. April 12–28, 2025: Curator Dona Kulmatova. August 3–23, 2025: Artist Zilola Kakhramonova. Supported by: the Swiss Agency for Development and Cooperation (SDC) and the Ministry of Ecology, Environmental Protection and Climate Change of the Republic of Uzbekistan.\n\nInternational residencies organized by Art Station in Bern (Switzerland) became an important step in strengthening international partnerships and professional development for artists and curators. From 1 to 11 April, designer-artist Svetlana Sarjan developed a conceptual project on Uzbek identities and cultural codes, engaging with cultural institutions and the independent art scene.\n\nFrom 12 to 28 April, Dona Kulmatova, director and curator of Art Station, participated in a research residency at PROGR, focusing on practices of revitalizing abandoned industrial buildings into active art spaces. Visits to art institutions in Bern, Zurich, and Solothurn formed a basis for adapting European practices to the Samarkand context.\n\nThe exchange continued with an educational trip by artist Zilola Kakhramonova from 3 to 23 August 2025, during which she visited museums and galleries in Bern, met local artists and curators, and presented her work in an open studio — strengthening Art Station’s international network and opening concrete opportunities for further collaborations.',
     },
   },
+
+  // ==========================================================
+  // 2026 — тексты по пресс-релизам и постам Art Station (Telegram/
+  // Instagram, весна–осень 2026). Основной язык источника указан в
+  // machineTranslatedLangs: там перечислены языки, переведённые
+  // машинно и требующие редактуры. Фото будут добавлены позже —
+  // пока фирменный плейсхолдер.
+  // ==========================================================
+  {
+    id: 'film_threads_of_support_2026',
+    type: 'professionalDevelopment',
+    hasFullContent: true,
+    startDate: '2026-03-27',
+    endDate: '2026-04-08',
+    coverImage: placeholderCover('Threads of Support'),
+    gallery: [],
+    partnerIds: [],
+    artistIds: [],
+    machineTranslatedLangs: ['ru', 'uz'],
+    title: {
+      ru: 'Threads of Support — показ документального фильма',
+      uz: 'Threads of Support — hujjatli film taqdimoti',
+      en: 'Threads of Support — Documentary Film Presentation',
+    },
+    description: {
+      ru: 'Режиссёр и монтаж: Оля Корсун. Продюсеры: Фуркат Палван-Заде, Фахад аль-Аттия. Оператор-постановщик: Люда Куропятникова. Звук: Павел Лерер. Линейные продюсеры в Узбекистане: Сабина Сулейманоглу, Шохрух Абдурахмонов. Перевод с узбекского: Адиль Беккулбеков. Интервью и исследование: Константин Корягин. Продажи и фестивали: Рита Соколовская. Цветокоррекция: Иван Дорогавцев. Фоторедактор: Дина Лун. Дизайн титров и постер: Аня Бялая. При поддержке: Doha Film Institute, Caravane Earth Foundation, Art Station Uzbekistan, Посольство Швейцарии в Узбекистане, Государственный музей шёлка (Тбилиси, Грузия).\n\n«Threads of Support» — поэтический документальный фильм об исторических, социальных и культурных контекстах производства шёлка в Маргилане (Узбекистан), в многослойном и сложном регионе Ферганской долины в Центральной Азии.\n\nФильм был представлен на Qumra — индустриальной программе Doha Film Institute. В её рамках команда провела 11 менторских сессий и 17 индустриальных встреч с международным сообществом киноэкспертов. Впереди — фестивальная жизнь фильма и встреча со зрителями.',
+      uz: 'Rejissyor va montaj: Olya Korsun. Prodyuserlar: Furqat Palvan-Zade, Fahad Al-Attiyah. Bosh operator: Luda Kuropyatnikova. Ovoz: Pavel Lehrer. O‘zbekistondagi ijro prodyuserlari: Sabina Suleymanoglu, Shohruh Abdurahmonov. O‘zbekchadan tarjima: Adil Bekkulbekov. Suhbatlar va tadqiqot: Konstantin Koryagin. Sotuv va festivallar: Rita Sokolovskaya. Rang bilan ishlash: Ivan Dorogavtsev. Foto muharrir: Dina Lun. Titr dizayni va afisha: Anya Byalaya. Qo‘llab-quvvatlash: Doha Film Institute, Caravane Earth Foundation, Art Station Uzbekistan, Shveytsariyaning O‘zbekistondagi elchixonasi va Ipak davlat muzeyi (Tbilisi, Gruziya).\n\n«Threads of Support» — Markaziy Osiyodagi Farg‘ona vodiysining ko‘pqatlamli va murakkab mintaqasida joylashgan Marg‘ilon (O‘zbekiston) shahridagi ipak ishlab chiqarishning tarixiy, ijtimoiy va madaniy kontekstlariga bag‘ishlangan poetik hujjatli film.\n\nFilm Doha Film Institute tomonidan Qumra dasturida taqdim etildi. Uning doirasida jamoa xalqaro kino ekspertlari hamjamiyati bilan 11 ta mentorlik uchrashuvi va 17 ta industriya uchrashuvini o‘tkazdi. Endi film festival tomoshabinlari bilan uchrashuvni kutmoqda.',
+      en: 'Director and editor: Olya Korsun. Producers: Furqat Palvan-Zade, Fahad Al-Attiyah. Director of photography: Luda Kuropyatnikova. Sound: Pavel Lehrer. Line producers in Uzbekistan: Sabina Suleymanoglu, Shokhrukh Abdurakhmonov. Translation from Uzbek: Adil Bekkulbekov. Interviews and research: Konstantin Koryagin. Sales and festivals: Rita Sokolovskaya. Color grading: Ivan Dorogavtsev. Photo editor: Dina Lun. Title design and poster art: Anya Byalaya. Supported by: Doha Film Institute, Caravane Earth Foundation, Art Station Uzbekistan, the Embassy of Switzerland in Uzbekistan, and the State Silk Museum, Tbilisi, Georgia.\n\n“Threads of Support” is a poetic documentary film focusing on the historical, social, and cultural contexts of silk production in Marghelan (Uzbekistan), located in the multilayered and complex region of the Ferghana Valley in Central Asia.\n\nThe film was presented at Qumra by the Doha Film Institute. During the programme the team took part in 11 mentorship sessions and 17 industry meetings with an international cohort of film experts, and the project is now looking forward to meeting festival audiences.',
+    },
+  },
+  {
+    id: 'ws_third_space_samarkand_2026',
+    type: 'workshop',
+    hasFullContent: true,
+    startDate: '2026-03-23',
+    endDate: '2026-03-30',
+    place: 'SamGASI, Samarkand',
+    coverImage: 'images/events/ws_third_space_samarkand_2026/cover.webp',
+    gallery: [
+      'images/events/ws_third_space_samarkand_2026/gallery-1.webp',
+      'images/events/ws_third_space_samarkand_2026/gallery-2.webp',
+    ],
+    partnerIds: [],
+    artistIds: [],
+    machineTranslatedLangs: ['uz', 'en'],
+    title: {
+      ru: 'Картирование «третьего пространства» в жилых микрорайонах — воркшоп',
+      uz: 'Turar-joy mikrorayonlarida «uchinchi makon»ni xaritalash — vorkshop',
+      en: 'Mapping Third Space in Housing Micro-Districts — Workshop',
+    },
+    description: {
+      ru: 'Организаторы: Art Station, Дона Кулматова, Анастасия Галимова (Узбекистан), Омар Нагати (Cluster, Египет), Элиса Винн-Хьюз (Кардиффский университет, Великобритания). При поддержке Британского совета. Проводится при содействии Международного университета туризма и культурного наследия «Шёлковый путь» в Самарканде, на базе Самаркандского государственного архитектурно-строительного института (СамГАСИ).\n\nМеждисциплинарный практико-ориентированный воркшоп по изучению социо-пространственных практик в жилых микрорайонах Самарканда. Участники — студенты старших курсов и недавние выпускники в области архитектуры, урбанистики, искусства, социальных и визуальных практик — осваивали методы полевой документации, основы картирования и визуального сторителлинга.\n\nВ течение недели участники много ходили по районам, наблюдали, разговаривали с жителями и фиксировали увиденное, собирая из отдельных деталей более целостную картину города: как люди используют пространство вокруг себя, как оно меняется в течение дня и какие незаметные практики формируют городскую жизнь. Итогом стала групповая выставка 30 марта.',
+      uz: 'Tashkilotchilar: Art Station, Dona Kulmatova, Anastasiya Galimova (O‘zbekiston), Omar Nagati (Cluster, Misr), Elisa Uinn-Hyuz (Kardiff universiteti, Buyuk Britaniya). Britaniya kengashi ko‘magida. Samarqanddagi «Ipak yo‘li» xalqaro turizm va madaniy meros universiteti ko‘maklashuvida, Samarqand davlat arxitektura-qurilish instituti (SamGASI) negizida o‘tkazildi.\n\nSamarqandning turar-joy mikrorayonlaridagi ijtimoiy-fazoviy amaliyotlarni o‘rganishga bag‘ishlangan fanlararo amaliy vorkshop. Ishtirokchilar — arxitektura, urbanistika, san’at, ijtimoiy va vizual amaliyotlar bo‘yicha yuqori kurs talabalari va yaqinda bitirganlar — dala hujjatlashtirish usullari, kartografiya asoslari va vizual hikoya qilishni o‘rgandilar.\n\nHafta davomida ishtirokchilar mahallalarni kezib chiqdilar, kuzatdilar, aholi bilan suhbatlashdilar va ko‘rganlarini qayd etib, alohida tafsilotlardan shaharning yaxlitroq manzarasini yig‘dilar: odamlar atrofdagi makondan qanday foydalanadi, u kun davomida qanday o‘zgaradi va qanday sezilmas amaliyotlar shahar hayotini shakllantiradi. Yakuniy natija — 30-martdagi guruhli ko‘rgazma.',
+      en: 'Organizers: Art Station, Dona Kulmatova, Anastasia Galimova (Uzbekistan), Omar Nagati (Cluster, Egypt), Elisa Wynne-Hughes (Cardiff University, UK). Supported by the British Council. Hosted with the assistance of the Silk Road International University of Tourism and Cultural Heritage in Samarkand, at the Samarkand State Institute of Architecture and Construction (SamGASI).\n\nAn interdisciplinary, practice-oriented workshop exploring socio-spatial practices in the residential micro-districts of Samarkand. Participants — senior students and recent graduates in architecture, urban studies, art, and social and visual practices — learned methods of field documentation, the basics of mapping, and visual storytelling.\n\nOver the week, participants walked the neighbourhoods, observed, talked with residents, and recorded what they saw, assembling a more holistic picture of the city from individual details: how people use the space around them, how it changes over the course of a day, and which barely noticeable practices shape urban life. The workshop concluded with a group exhibition on 30 March.',
+    },
+  },
+  {
+    id: 'exh_falak_2026',
+    type: 'exhibition',
+    hasFullContent: true,
+    startDate: '2026-04-22',
+    endDate: '2026-04-24',
+    place: 'Mangilik El 53/1, Astana, Kazakhstan',
+    coverImage: 'images/events/exh_falak_2026/cover.webp',
+    gallery: [
+      'images/events/exh_falak_2026/gallery-1.webp',
+      'images/events/exh_falak_2026/gallery-2.webp',
+    ],
+    partnerIds: [],
+    artistIds: [],
+    machineTranslatedLangs: ['uz', 'en'],
+    title: {
+      ru: 'Фалак: Песнь воды и земли',
+      uz: 'Falak: Suv va yer qo‘shig‘i',
+      en: 'Falak: Song of Water and Earth',
+    },
+    description: {
+      ru: 'Куратор: Диана Рахманова. Координатор: Юлия Ганина. Монтаж: Илья Каримджанов. Партнёры и участники: Art Station, инициатива «Приключение науки: женщины и ледники в Центральной Азии» (AoS), Региональный офис ЮНЕСКО в Алматы, КазНУ имени аль-Фараби (кафедра гидрометеорологии), Цюрихский университет искусств (департамент визуализации знаний), Общественный фонд «Ибтидо», Silk Road Project (Милли Чен, Арзу Озкал), эко-арт проект We Are Water, художница Жанна Ассанова. Финансовая поддержка: Швейцарское агентство по развитию и сотрудничеству (SDC).\n\nВыставка в рамках Regional Environmental Summit (RES) 2026. Центральная Азия связана едиными природными системами — водой, ледниками, ландшафтами и климатом, и изменения в одной части региона неизбежно отражаются на других. Выставка предлагает обратиться к этим процессам через искусство — не как к абстрактным данным, а как к опыту, который можно почувствовать и осмыслить.\n\nВ основе проекта — понятие фалак, традиционной формы народного песнопения Центральной Азии: обращение человека к миру, природе и судьбе, в котором личное переживание становится общим. Здесь фалак переосмысляется как художественный метод разговора о климатических изменениях, утрате, памяти и ответственности. Через инсталляции, текстильные работы, кинопоказы, дискуссии и воркшопы выставка создаёт пространство диалога с природой.\n\nОт Art Station была представлена инсталляция «Письма к Аралу» художника и скульптора Джамшида Кадирова. В течение всех дней проходила серия воркшопов, где участники писали письма Аральскому морю и отпускали их в воду — как личное высказывание и жест памяти.',
+      uz: 'Kurator: Diana Raxmanova. Koordinator: Yuliya Ganina. Montaj: Ilya Karimdjanov. Hamkorlar va ishtirokchilar: Art Station, «Fan sarguzashti: Markaziy Osiyoda ayollar va muzliklar» tashabbusi (AoS), YUNESKOning Olma-otadagi mintaqaviy idorasi, al-Forobiy nomidagi QazMU (gidrometeorologiya kafedrasi), Sürix san’at universiteti (bilimlarni vizuallashtirish bo‘limi), «Ibtido» jamoat fondi, Silk Road Project (Milli Chen, Arzu O‘zkal), We Are Water eko-san’at loyihasi, rassom Janna Asanova. Moliyaviy ko‘mak: Shveytsariya Taraqqiyot va Hamkorlik Agentligi (SDC).\n\nRegional Environmental Summit (RES) 2026 doirasidagi ko‘rgazma. Markaziy Osiyo yagona tabiiy tizimlar — suv, muzliklar, landshaftlar va iqlim bilan bog‘langan, mintaqaning bir qismidagi o‘zgarishlar muqarrar ravishda boshqalarga ta’sir qiladi. Ko‘rgazma bu jarayonlarga san’at orqali — mavhum ma’lumot sifatida emas, balki his qilib va anglab bo‘ladigan tajriba sifatida yondashishni taklif qiladi.\n\nLoyiha negizida falak — Markaziy Osiyoda keng tarqalgan an’anaviy xalq qo‘shig‘i tushunchasi yotadi: insonning dunyoga, tabiatga va taqdirga murojaati, unda shaxsiy kechinma umumiyga aylanadi. Bu yerda falak iqlim o‘zgarishi, yo‘qotish, xotira va mas’uliyat haqida so‘zlashning badiiy usuli sifatida qayta talqin qilinadi. Ko‘rgazma installyatsiya, to‘qimachilik ishlari, kino namoyishlari, munozaralar va vorkshoplar orqali tabiat bilan muloqot maydonini yaratadi.\n\nArt Station tomonidan rassom va haykaltarosh Jamshid Qodirovning «Orolga maktublar» installyatsiyasi taqdim etildi. Barcha kunlar davomida ishtirokchilar Orol dengiziga maktub yozib, ularni suvga qo‘yib yuborgan vorkshoplar turkumi o‘tkazildi — bu shaxsiy so‘z va xotira ramzi.',
+      en: 'Curator: Diana Rakhmanova. Coordinator: Yulia Ganina. Installation: Ilya Karimdzhanov. Partners and participants: Art Station, the initiative “Adventure of Science: Women and Glaciers in Central Asia” (AoS), the UNESCO Regional Office in Almaty, al-Farabi Kazakh National University (Department of Hydrometeorology), Zurich University of the Arts (Knowledge Visualization department), the Ibtido Public Foundation, the Silk Road Project (Millie Chen, Arzu Ozkal), the eco-art project We Are Water, and artist Zhanna Assanova. Financial support: the Swiss Agency for Development and Cooperation (SDC).\n\nAn exhibition within the Regional Environmental Summit (RES) 2026. Central Asia is bound together by shared natural systems — water, glaciers, landscapes, and climate — and changes in one part of the region inevitably affect the others. The exhibition invites viewers to approach these processes through art: not as abstract data, but as an experience that can be felt and reflected upon.\n\nAt the heart of the project is the notion of falak, a traditional form of folk chant widespread in Central Asia — a person’s address to the world, to nature, and to fate, in which personal experience becomes shared. Here falak is reimagined as an artistic method for speaking about climate change, loss, memory, and responsibility. Through installation, textile works, film screenings, discussions, and workshops, the exhibition creates a space for dialogue with nature.\n\nArt Station presented the installation “Letters to the Aral” by artist and sculptor Djamshid Kadirov. Throughout the summit, a series of workshops was held in which participants wrote letters to the Aral Sea and released them into the water — a personal statement and a gesture of memory.',
+    },
+  },
+  {
+    id: 'ws_digital_art_animation_2026',
+    type: 'workshop',
+    hasFullContent: true,
+    startDate: '2026-05-21',
+    endDate: '2026-05-24',
+    place: 'Tashkent',
+    coverImage: 'images/events/ws_digital_art_animation_2026/cover.webp',
+    gallery: ['images/events/ws_digital_art_animation_2026/gallery-1.webp'],
+    partnerIds: [],
+    artistIds: [],
+    machineTranslatedLangs: ['ru', 'uz'],
+    title: {
+      ru: 'Воркшоп по цифровому искусству и анимации с Петером Эршманном',
+      uz: 'Peter Aerschmann bilan raqamli san’at va animatsiya vorkshopi',
+      en: 'Digital Art & Animation Workshop with Peter Aerschmann',
+    },
+    description: {
+      ru: 'Ведущий: Петер Эршманн (Швейцария). При поддержке Швейцарского совета по культуре Pro Helvetia и Университета Пучон в Ташкенте. Воркшоп проводится в рамках проекта «Art Station: перекрёсток свободы самовыражения, художественного творчества, инклюзивного диалога и развития общества», осуществляемого при многолетнем сотрудничестве с Центральноазиатской программой искусства и культуры (CAACP) Швейцарского агентства по развитию и сотрудничеству (SDC).\n\nЧетырёхдневный воркшоп по цифровому видео и анимации для художников, дизайнеров и медиапрактиков. Участники работали бок о бок с международно признанным художником Петером Эршманном, осваивали видео, анимацию и цифровые инструменты и экспериментировали с построением сцен, зацикленных движений и точных визуальных композиций, развивая собственный проект.\n\nДаты: 21–24 мая 2026, 13:30–18:00. Место: Ташкент. Приём заявок — до 10 мая 2026, число мест ограничено.',
+      uz: 'Yetakchi: Peter Aerschmann (Shveytsariya). Shveytsariya madaniyat kengashi Pro Helvetia va Toshkentdagi Puchon universiteti ko‘magida. Vorkshop «Art Station: so‘z erkinligi, badiiy ijod, inklyuziv muloqot va jamiyat rivoji chorrahasi» loyihasi doirasida, Shveytsariya Taraqqiyot va Hamkorlik Agentligi (SDC)ning Markaziy Osiyo san’at va madaniyat dasturi (CAACP) bilan ko‘p yillik hamkorlikda o‘tkaziladi.\n\nRassomlar, dizaynerlar va media amaliyotchilari uchun raqamli video va animatsiya bo‘yicha to‘rt kunlik vorkshop. Ishtirokchilar xalqaro e’tirof etilgan rassom Peter Aerschmann bilan yonma-yon ishlab, video, animatsiya va raqamli vositalarni o‘rgandilar hamda sahnalar qurish, siklik harakatlar va aniq vizual kompozitsiyalar ustida tajriba o‘tkazib, o‘z loyihasini rivojlantirdilar.\n\nSanalar: 2026-yil 21–24-may, 13:30–18:00. Manzil: Toshkent. Arizalar 2026-yil 10-maygacha qabul qilindi, o‘rinlar soni cheklangan.',
+      en: 'Facilitator: Peter Aerschmann (Switzerland). Supported by the Swiss Arts Council Pro Helvetia and Bucheon University in Tashkent. The workshop is conducted within the framework of the project “Art Station: Crossroads of Freedom of Expression, Artistic Creativity, Inclusive Dialogue and Community Development,” implemented in long-standing cooperation with the Central Asia Art and Culture Programme (CAACP) of the Swiss Agency for Development and Cooperation (SDC).\n\nA four-day workshop in digital video and animation for artists, designers, and media practitioners. Participants worked side by side with the internationally recognized artist Peter Aerschmann, explored video, animation, and digital tools, and experimented with building scenes, looped movements, and precise visual compositions while developing their own project.\n\nDates: 21–24 May 2026, 13:30–18:00. Location: Tashkent. Applications were open until 10 May 2026; places were limited.',
+    },
+  },
+  {
+    id: 'exh_marionettes_2026',
+    type: 'exhibition',
+    hasFullContent: true,
+    startDate: '2026-05-20',
+    endDate: '2026-07-31',
+    place: 'ARTepa Gallery by Green University, Astronomy Park, Tashkent',
+    coverImage: 'images/events/exh_marionettes_2026/cover.webp',
+    gallery: ['images/events/exh_marionettes_2026/gallery-1.webp'],
+    partnerIds: [],
+    artistIds: [],
+    machineTranslatedLangs: ['uz', 'en'],
+    title: {
+      ru: 'MARIONETTES — персональная выставка Петера Эршманна',
+      uz: 'MARIONETTES — Peter Aerschmann shaxsiy ko‘rgazmasi',
+      en: 'MARIONETTES — Solo Exhibition by Peter Aerschmann',
+    },
+    description: {
+      ru: 'Художник: Петер Эршманн (Швейцария). Выставка проводится при поддержке Швейцарского совета по искусству Pro Helvetia и Национального комитета Республики Узбекистан по экологии и изменению климата, в рамках проекта «Art Station: перекрёсток свободы самовыражения, художественного творчества, инклюзивного диалога и развития общества» (в сотрудничестве с CAACP Швейцарского агентства по развитию и сотрудничеству, SDC).\n\nMarionettes — персональная выставка швейцарского видео- и медиахудожника Петера Эршманна: медитативное видео-пространство, где привычные движения превращаются в бесконечные циклы, а человек существует между контролем и свободой. Более 20 лет Эршманн исследует поведение человека через видеоинсталляции и цифровые tableaux vivants — «живые картины», персонажи которых повторяют жесты снова и снова, словно марионетки внутри систем: технологий, социальных норм, экономических процессов и экологических кризисов.\n\nОдна из центральных тем выставки — экология, не как отдельный образ природы, а как часть повседневных привычек, влияющих на окружающую среду. Через повторение, цикличность и замедленное движение выставка говорит о моделях потребления, ответственности и возможности перемен — о том, как даже маленькое отклонение от привычного ритма может стать началом трансформации.\n\nОткрытие: 20 мая 2026, 19:00. ARTepa Gallery by Green University, Astronomy Park, ул. Осиё, Ташкент. Выставка работает до 31 июля 2026.',
+      uz: 'Rassom: Peter Aerschmann (Shveytsariya). Ko‘rgazma Shveytsariya san’at kengashi Pro Helvetia va O‘zbekiston Respublikasi Ekologiya va iqlim o‘zgarishi milliy qo‘mitasi ko‘magida, «Art Station: so‘z erkinligi, badiiy ijod, inklyuziv muloqot va jamiyat rivoji chorrahasi» loyihasi doirasida (Shveytsariya Taraqqiyot va Hamkorlik Agentligi, SDC ning CAACP dasturi bilan hamkorlikda) taqdim etiladi.\n\nMarionettes — shveytsariyalik video va media rassom Peter Aerschmannning shaxsiy ko‘rgazmasi: bu meditativ video-makon bo‘lib, unda odatiy harakatlar cheksiz sikllarga aylanadi, inson esa nazorat va erkinlik orasida yashaydi. Aerschmann 20 yildan ortiq vaqt davomida inson xatti-harakatini video installyatsiyalar va raqamli tableaux vivants — «jonli suratlar» orqali o‘rganadi; ularning qahramonlari imo-ishoralarni qayta-qayta takrorlaydi, xuddi tizimlar ichidagi qo‘g‘irchoqlardek: texnologiyalar, ijtimoiy me’yorlar, iqtisodiy jarayonlar va ekologik inqirozlar.\n\nKo‘rgazmaning markaziy mavzularidan biri — ekologiya, tabiatning alohida qiyofasi sifatida emas, balki atrof-muhitga ta’sir qiluvchi kundalik odatlarning bir qismi sifatida. Takror, siklik va sekinlashgan harakat orqali ko‘rgazma iste’mol modellari, mas’uliyat va o‘zgarish imkoniyati haqida so‘zlaydi — odatiy maromdan kichik chetlanish ham o‘zgarishning boshlanishi bo‘lishi mumkinligi haqida.\n\nOchilish: 2026-yil 20-may, 19:00. ARTepa Gallery by Green University, Astronomy Park, Osiyo ko‘chasi, Toshkent. Ko‘rgazma 2026-yil 31-iyulgacha ochiq.',
+      en: 'Artist: Peter Aerschmann (Switzerland). The exhibition is presented with the support of the Swiss Arts Council Pro Helvetia and the National Committee of the Republic of Uzbekistan for Ecology and Climate Change, within the project “Art Station: Crossroads of Freedom of Expression, Artistic Creativity, Inclusive Dialogue and Community Development” (in cooperation with the CAACP of the Swiss Agency for Development and Cooperation, SDC).\n\nMarionettes is a solo exhibition by Swiss video and media artist Peter Aerschmann: a meditative video space where familiar movements turn into endless loops and the human figure exists between control and freedom. For more than 20 years Aerschmann has explored human behaviour through video installations and digital tableaux vivants — “living pictures” whose characters repeat their gestures again and again, like marionettes inside systems: technology, social norms, economic processes, and ecological crises.\n\nOne of the exhibition’s central themes is ecology — not as a separate image of nature, but as part of the everyday habits that affect the environment. Through repetition, cyclicality, and slowed-down motion, the exhibition speaks about patterns of consumption, responsibility, and the possibility of change — about how even a small deviation from a habitual rhythm can become the beginning of a transformation.\n\nOpening: 20 May 2026, 19:00. ARTepa Gallery by Green University, Astronomy Park, Osiyo street, Tashkent. On view until 31 July 2026.',
+    },
+  },
+  {
+    id: 'ws_earth_water_air_2026',
+    type: 'workshop',
+    hasFullContent: true,
+    startDate: '2026-10-01',
+    dateLabel: { ru: 'Скоро', uz: 'Tez orada', en: 'Coming soon' },
+    place: 'ARTepa Gallery by Green University, Tashkent',
+    coverImage: 'images/events/ws_earth_water_air_2026/cover.webp',
+    gallery: [],
+    partnerIds: [],
+    artistIds: [],
+    machineTranslatedLangs: ['uz', 'en'],
+    title: {
+      ru: 'EARTH, WATER & AIR',
+      uz: 'EARTH, WATER & AIR',
+      en: 'EARTH, WATER & AIR',
+    },
+    description: {
+      ru: 'Организаторы: Art Station и исследовательский коллектив DAVRA. При поддержке Национального комитета Республики Узбекистан по экологии и изменению климата и Швейцарского агентства по развитию и сотрудничеству (SDC) в рамках Central Asia Art and Culture Programme (CAACP) и проекта «Art Station: перекрёсток свободы самовыражения, художественного творчества, инклюзивного диалога и развития общества». Фото: Дарья Раскольникова.\n\nВ галерее ARTepa by Green University прошли воркшопы EARTH, WATER & AIR, участники которых в течение пяти дней работали над будущими проектами и перформансами. Художники из разных стран Центральной Азии объединились в совместные группы и начали создавать новые работы, исследуя общие для региона темы — землю, воду, воздух, климат, ландшафт и отношения человека с окружающей средой.\n\nПредварительный показ стал первой возможностью поделиться этими идеями со зрителями. Индивидуальные художественные практики постепенно превратились в совместный творческий процесс через обмен опытом и диалог. Представленные работы продолжат развиваться и станут частью совместной выставки участников EARTH, WATER & AIR, которая откроется в галерее ARTepa этой осенью.',
+      uz: 'Tashkilotchilar: Art Station va DAVRA tadqiqot jamoasi. O‘zbekiston Respublikasi Ekologiya va iqlim o‘zgarishi milliy qo‘mitasi hamda Shveytsariya Taraqqiyot va Hamkorlik Agentligi (SDC) ko‘magida, Central Asia Art and Culture Programme (CAACP) va «Art Station: so‘z erkinligi, badiiy ijod, inklyuziv muloqot va jamiyat rivoji chorrahasi» loyihasi doirasida. Foto: Darya Raskolnikova.\n\nARTepa by Green University galereyasida EARTH, WATER & AIR vorkshoplari bo‘lib o‘tdi; ularning ishtirokchilari besh kun davomida bo‘lajak loyihalar va performanslar ustida ishladilar. Markaziy Osiyoning turli mamlakatlaridan kelgan rassomlar birgalikdagi guruhlarga birlashib, mintaqa uchun umumiy mavzularni — yer, suv, havo, iqlim, landshaft va inson bilan atrof-muhit munosabatlarini o‘rganib, yangi asarlar yarata boshladilar.\n\nDastlabki namoyish bu g‘oyalarni tomoshabinlar bilan bo‘lishishning birinchi imkoniyati bo‘ldi. Individual badiiy amaliyotlar tajriba almashish va muloqot orqali asta-sekin birgalikdagi ijodiy jarayonga aylandi. Namoyish etilgan asarlar rivojlanishda davom etadi va EARTH, WATER & AIR ishtirokchilarining shu kuz ARTepa galereyasida ochiladigan birgalikdagi ko‘rgazmasi tarkibiga kiradi.',
+      en: 'Organizers: Art Station and the research collective DAVRA. Supported by the National Committee of the Republic of Uzbekistan for Ecology and Climate Change and the Swiss Agency for Development and Cooperation (SDC) within the Central Asia Art and Culture Programme (CAACP) and the project “Art Station: Crossroads of Freedom of Expression, Artistic Creativity, Inclusive Dialogue and Community Development.” Photo: Daria Raskolnikova.\n\nThe ARTepa Gallery by Green University hosted the EARTH, WATER & AIR workshops, whose participants spent five days working on future projects and performances. Artists from across Central Asia formed joint groups and began creating new works, exploring themes shared across the region — earth, water, air, climate, landscape, and the relationship between people and their environment.\n\nThe preview show was the first opportunity to share these ideas with an audience. Individual artistic practices gradually turned into a collective creative process through the exchange of experience and dialogue. The works shown will continue to develop and will become part of a joint exhibition by the EARTH, WATER & AIR participants, opening at the ARTepa Gallery this autumn.',
+    },
+  },
 ]
 
 /*
@@ -1066,12 +1217,8 @@ const shortEventInputs: ShortEventInput[] = [
   { title: 'WE HAVE SOMETHING TO SAY', type: 'exhibition', start: '2025-12-13', end: '2025-12-27' },
   { title: 'New Year Fair', type: 'fair', start: '2025-12-18', end: '2025-12-21' },
 
-  // --- 2026 (программа опубликована частично) ---
-  { title: 'Mapping Third Space in Housing Micro-Districts Workshop', type: 'workshop', start: '2026-03-23', end: '2026-03-29' },
-  { title: 'Presentation of the Documentary Film "Threads of Support"', type: 'professionalDevelopment', start: '2026-03-27', end: '2026-04-08' },
-  { title: 'FALAK: Song of Water and Land', type: 'exhibition', start: '2026-04-22', end: '2026-04-24' },
-  { title: 'Marionettes', type: 'exhibition', start: '2026-05-20', end: '2026-08-15' },
-  { title: 'Digital Art & Animation Workshop', type: 'workshop', start: '2026-05-21', end: '2026-05-24' },
+  // --- 2026 (программа опубликована частично; события с полными
+  // описаниями вынесены в fullEvents выше) ---
   { title: 'Art Archive of Uzbekistan. Episode 1 — Tulagyan Erkulov', type: 'digitalArchive', start: '2026-06-22' },
 ]
 
@@ -1097,7 +1244,13 @@ export const shortEvents: EventShort[] = shortEventInputs.map(({ title, type, st
   title: { en: title },
 }))
 
-export const events: Event[] = [...fullEvents, ...shortEvents]
+// По просьбе заказчика карточки без реального фото (плейсхолдер
+// placehold.co) на сайте не показываем. Данные о событиях остаются в
+// fullEvents/shortEvents — как только появится обложка, событие снова
+// попадёт в выдачу.
+const hasRealPhoto = (e: Event) => !e.coverImage.startsWith('https://placehold.co')
+
+export const events: Event[] = [...fullEvents, ...shortEvents].filter(hasRealPhoto)
 
 export function getEventById(id: string): Event | undefined {
   return events.find((e) => e.id === id)

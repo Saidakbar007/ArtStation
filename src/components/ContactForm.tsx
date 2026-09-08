@@ -10,13 +10,19 @@ interface Errors {
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-// Сайт полностью статический (нет backend/сервера), поэтому "тихая"
-// отправка через API невозможна без стороннего сервиса вроде EmailJS
-// или Formspree (а для них нужен аккаунт и ключи, которые есть только
-// у владельца сайта). mailto: — единственный способ реально доставить
-// заявку без бэкенда: открывает почтовый клиент посетителя с уже
-// заполненным письмом на этот адрес, отправку он подтверждает сам.
-const CONTACT_EMAIL = 'amirshax0914@gmail.com'
+// Куда приходят заявки. Используется как запасной вариант (mailto), если
+// отправка через Web3Forms не удалась.
+const CONTACT_EMAIL = 'artstation.uz@gmail.com'
+
+// Web3Forms — бесплатный сервис доставки писем для статических сайтов
+// (без бэкенда). Ключ доступа НЕ секретный: он предназначен для
+// использования прямо в клиентском коде и привязан к почте
+// artstation.uz@gmail.com. Получить/сменить: https://web3forms.com
+// (ввести адрес почты — ключ придёт письмом).
+// Можно переопределить через переменную окружения VITE_WEB3FORMS_KEY.
+const WEB3FORMS_ACCESS_KEY =
+  (import.meta.env.VITE_WEB3FORMS_KEY as string | undefined) ||
+  'REPLACE_WITH_WEB3FORMS_ACCESS_KEY'
 
 export function ContactForm() {
   const { language, t } = useLanguage()
@@ -24,7 +30,7 @@ export function ContactForm() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [errors, setErrors] = useState<Errors>({})
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success'>('idle')
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
   function validate(): Errors {
     const next: Errors = {}
@@ -35,7 +41,15 @@ export function ContactForm() {
     return next
   }
 
-  function handleSubmit(e: FormEvent) {
+  function openMailtoFallback() {
+    const subject = `Сообщение с сайта Art Station — ${name}`
+    const body = `Имя: ${name}\nEmail: ${email}\n\n${message}`
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`
+  }
+
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault()
     const next = validate()
     setErrors(next)
@@ -43,14 +57,39 @@ export function ContactForm() {
 
     setStatus('sending')
 
-    const subject = `Сообщение с сайта Art Station — ${name}`
-    const body = `Имя: ${name}\nEmail: ${email}\n\n${message}`
-    const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    // Пока ключ Web3Forms не подставлен — сразу открываем почтовый клиент,
+    // не дёргая API (иначе посетитель увидит вспышку ошибки).
+    if (WEB3FORMS_ACCESS_KEY.startsWith('REPLACE_WITH')) {
+      window.setTimeout(() => {
+        openMailtoFallback()
+        setStatus('success')
+      }, 400)
+      return
+    }
 
-    window.setTimeout(() => {
-      window.location.href = mailtoUrl
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Сообщение с сайта Art Station — ${name}`,
+          from_name: 'Art Station — сайт',
+          name,
+          email,
+          message,
+        }),
+      })
+      const data = (await res.json()) as { success?: boolean }
+      if (!res.ok || !data.success) throw new Error('Web3Forms request failed')
       setStatus('success')
-    }, 500)
+    } catch {
+      setStatus('error')
+      openMailtoFallback()
+    }
   }
 
   if (status === 'success') {
@@ -98,6 +137,10 @@ export function ContactForm() {
         />
         {errors.message && <span className={styles.errorText}>{errors.message}</span>}
       </div>
+
+      {status === 'error' && (
+        <p className={styles.errorText}>{t.contact.formErrorSend[language]}</p>
+      )}
 
       <button type="submit" className={styles.submit} disabled={status === 'sending'}>
         {status === 'sending' ? t.contact.formSending[language] : t.contact.formSubmit[language]}

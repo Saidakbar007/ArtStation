@@ -37,7 +37,6 @@ export function Footer() {
             <li><a href="tel:+998950209988">+998 95 020 99 88</a></li>
             <li><a href="https://www.instagram.com/artstationuz" target="_blank" rel="noreferrer">Instagram</a></li>
             <li><a href="https://www.facebook.com/share/1AnG8G9mFb/?mibextid=LQQJ4d" target="_blank" rel="noreferrer">Facebook</a></li>
-            <li><a href="https://www.tiktok.com/@artstation.uz" target="_blank" rel="noreferrer">TikTok</a></li>
             <li><a href="https://youtube.com/@artstation_uz" target="_blank" rel="noreferrer">YouTube</a></li>
           </ul>
         </div>

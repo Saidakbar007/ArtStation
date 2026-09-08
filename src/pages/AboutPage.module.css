@@ -89,7 +89,7 @@
 }
 
 .sectionAlt {
-  background: #fafafa;
+  background: var(--surface-alt);
 }
 
 .quotes {
@@ -156,7 +156,7 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.5rem;
-  border: 2px solid var(--color-black);
+  border: 2px solid var(--ink);
   border-radius: 999px;
   padding: 10px 24px;
 }
@@ -181,7 +181,7 @@
 }
 
 .portfolioCard {
-  border: 1px solid #e5e5e5;
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: var(--space-3);
 }
@@ -191,7 +191,7 @@
   font-weight: 700;
   font-size: 1.1rem;
   margin-bottom: 8px;
-  color: var(--color-black);
+  color: var(--ink);
 }
 
 .portfolioCardTitle::before {
@@ -229,9 +229,9 @@
   position: relative;
   height: 100%;
   padding: var(--space-3) var(--space-2) var(--space-2);
-  background: var(--color-white);
+  background: var(--surface);
   border-radius: var(--radius-md);
-  border: 1px solid #eee;
+  border: 1px solid var(--border);
   overflow: hidden;
   box-sizing: border-box;
   transition:
@@ -252,7 +252,7 @@
 
 .audienceItem:hover {
   transform: translateY(-5px);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 14px 28px var(--shadow-sm);
   border-color: transparent;
 }
 
@@ -264,11 +264,11 @@
   height: 36px;
   margin-bottom: var(--space-2);
   border-radius: 50%;
-  background: color-mix(in srgb, var(--accent, var(--color-yellow)) 35%, white);
+  background: color-mix(in srgb, var(--accent, var(--color-yellow)) 35%, var(--surface));
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.85rem;
-  color: var(--color-black);
+  color: var(--ink);
 }
 
 .audienceText {
@@ -279,6 +279,7 @@
 
 .announcement {
   background: var(--color-yellow);
+  color: var(--color-black);
   border-radius: var(--radius-md);
   padding: var(--space-3);
   margin-top: var(--space-3);
@@ -317,14 +318,14 @@
 
 .teamRole {
   font-size: 0.8rem;
-  color: #777;
+  color: var(--text-subtle);
 }
 
 .teamSocial {
   display: inline-block;
   margin-top: 4px;
   font-size: 0.8rem;
-  color: var(--color-black);
+  color: var(--ink);
   border-bottom: 1px solid var(--color-yellow);
 }
 
@@ -350,13 +351,13 @@
 .addressCard {
   padding: var(--space-3);
   border-radius: var(--radius-md);
-  border: 1px solid #eee;
+  border: 1px solid var(--border);
 }
 
 .addressCardLabel {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #999;
+  color: var(--text-subtle);
   margin-bottom: 6px;
 }

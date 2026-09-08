@@ -4,7 +4,7 @@ import { events } from '../data/events'
 import { stats } from '../data/stats'
 import { useLanguage } from '../i18n/LanguageContext'
 import { pickText } from '../utils/localize'
-import { formatDateRange, pickFeaturedEvent } from '../utils/date'
+import { formatEventDate, pickFeaturedEvent } from '../utils/date'
 import { DuotoneFilter } from './DuotoneFilter'
 import { EventModal } from './EventModal'
 import type { Event } from '../types'
@@ -105,7 +105,7 @@ export function Hero() {
           <span className={styles.captionStatus}>{statusLabel}</span>
           <span className={styles.captionTitle}>{pickText(featured.event.title, language)}</span>
           <span className={styles.captionDate}>
-            {formatDateRange(featured.event.startDate, featured.event.endDate, language)}
+            {formatEventDate(featured.event, language)}
           </span>
           {featured.event.hasFullContent ? (
             <Link to={`/events/${featured.event.id}`} className={styles.cta}>

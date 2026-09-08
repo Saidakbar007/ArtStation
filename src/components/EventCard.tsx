@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import type { Event } from '../types'
 import { useLanguage } from '../i18n/LanguageContext'
 import { pickText } from '../utils/localize'
-import { formatDateRange, getEventStatus } from '../utils/date'
+import { formatEventDate, getEventStatus } from '../utils/date'
 import { EventTypeBadge } from './EventTypeBadge'
 import { LiveDot } from './LiveDot'
 import styles from './EventCard.module.css'
@@ -28,7 +28,7 @@ export function EventCard({ event, onOpenShort }: { event: Event; onOpenShort?: 
         )}
       </div>
       <div className={styles.meta}>
-        <span>{formatDateRange(event.startDate, event.endDate, language)}</span>
+        <span>{formatEventDate(event, language)}</span>
         <EventTypeBadge type={event.type} />
       </div>
       <h3 className={styles.title}>{title}</h3>

@@ -11,6 +11,18 @@
       rel="stylesheet"
     />
     <title>Art Station</title>
+    <script>
+      // Выставляем тему до отрисовки, чтобы не мигало светлым при загрузке.
+      (function () {
+        try {
+          var t = localStorage.getItem('artstation-theme')
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          }
+          document.documentElement.setAttribute('data-theme', t)
+        } catch (e) {}
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

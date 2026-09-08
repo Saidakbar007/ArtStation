@@ -10,7 +10,7 @@
 }
 
 .modal {
-  background: var(--color-white);
+  background: var(--surface);
   border-radius: var(--radius-md);
   max-width: 480px;
   width: 100%;
@@ -23,7 +23,8 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  background: var(--color-white);
+  background: var(--surface);
+  color: var(--ink);
   border: none;
   border-radius: 50%;
   width: 32px;
@@ -48,7 +49,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 0.8rem;
-  color: #777;
+  color: var(--text-subtle);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin-bottom: var(--space-1);
@@ -63,5 +64,5 @@
 
 .note {
   font-size: 0.85rem;
-  color: #888;
+  color: var(--text-subtle);
 }

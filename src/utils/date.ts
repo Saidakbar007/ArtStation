@@ -1,4 +1,5 @@
-import type { Language } from '../types'
+import type { Language, PartialLocalizedText } from '../types'
+import { pickText } from './localize'
 
 export type EventStatus = 'upcoming' | 'ongoing' | 'past'
 
@@ -48,6 +49,18 @@ export function formatDateRange(startDate: string, endDate: string | undefined, 
   const startStr = new Intl.DateTimeFormat(locale, dayMonthYear).format(start)
   const endStr = new Intl.DateTimeFormat(locale, dayMonthYear).format(end)
   return `${startStr} – ${endStr}`
+}
+
+/**
+ * Дата события для карточек: либо явная метка dateLabel ("Скоро"), либо
+ * форматированный диапазон startDate–endDate.
+ */
+export function formatEventDate(
+  event: { startDate: string; endDate?: string; dateLabel?: PartialLocalizedText },
+  lang: Language,
+): string {
+  if (event.dateLabel) return pickText(event.dateLabel, lang)
+  return formatDateRange(event.startDate, event.endDate, lang)
 }
 
 /** Ближайшее по времени событие: идущее сейчас > ближайшее будущее > самое недавнее прошлое. */

@@ -149,11 +149,6 @@ export const audience: LocalizedText[] = [
     uz: 'Faol madaniy va ta\'lim hayotini izlayotgan mahalliy aholi',
     en: 'Local residents seeking a vibrant cultural and educational life',
   },
-  {
-    ru: 'Дети с ограниченными возможностями, вовлечённые в адаптированные образовательные и творческие программы',
-    uz: "Moslashtirilgan ta'lim va ijodiy dasturlarga jalb qilingan nogironligi bo'lgan bolalar",
-    en: 'Children with disabilities engaged in adapted educational and creative programs',
-  },
 ]
 
 export const survey: { title: LocalizedText; paragraphs: LocalizedText[] } = {

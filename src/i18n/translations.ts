@@ -13,6 +13,10 @@ export const ui = {
     about: { ru: 'О нас', uz: 'Biz haqimizda', en: 'About' },
     contact: { ru: 'Контакты', uz: 'Aloqa', en: 'Contact' },
   },
+  theme: {
+    toLight: { ru: 'Светлая тема', uz: 'Yorug‘ mavzu', en: 'Light theme' },
+    toDark: { ru: 'Тёмная тема', uz: 'Qorong‘i mavzu', en: 'Dark theme' },
+  },
   hero: {
     liveNow: { ru: 'Сейчас идёт', uz: 'Hozir davom etmoqda', en: 'Live now' },
     upcoming: { ru: 'Скоро', uz: 'Tez orada', en: 'Upcoming' },
@@ -135,6 +139,11 @@ export const ui = {
     },
     formErrorRequired: { ru: 'Заполните это поле', uz: "Bu maydonni to'ldiring", en: 'This field is required' },
     formErrorEmail: { ru: 'Введите корректный email', uz: "To'g'ri email kiriting", en: 'Enter a valid email' },
+    formErrorSend: {
+      ru: 'Не удалось отправить сообщение. Попробуйте позже или напишите на почту напрямую.',
+      uz: "Xabarni yuborib bo'lmadi. Keyinroq urinib ko'ring yoki to'g'ridan-to'g'ri pochtaga yozing.",
+      en: 'Could not send the message. Please try again later or email us directly.',
+    },
   },
   footer: {
     rights: { ru: 'Все права защищены', uz: 'Barcha huquqlar himoyalangan', en: 'All rights reserved' },

@@ -24,6 +24,14 @@ interface EventBase {
   type: EventType
   startDate: string
   endDate?: string
+  /**
+   * Человекочитаемая метка вместо даты — для событий, у которых точная
+   * дата ещё не объявлена ("Скоро" / "Coming soon"). Если задана,
+   * карточки показывают её вместо форматированного диапазона дат;
+   * startDate при этом всё равно используется для сортировки и статуса,
+   * поэтому ставьте туда ориентировочную дату.
+   */
+  dateLabel?: PartialLocalizedText
   coverImage: string
 }
 
@@ -71,7 +79,6 @@ export interface Partner {
 export interface TeamMember {
   id: string
   name: string
-  role: string
+  role?: string
   photo: string
-  social?: { label: string; url: string }
 }

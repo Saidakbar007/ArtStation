@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import type { Event } from '../types'
 import { useLanguage } from '../i18n/LanguageContext'
 import { pickText } from '../utils/localize'
-import { formatDateRange } from '../utils/date'
+import { formatEventDate } from '../utils/date'
 import { Reveal } from './Reveal'
 import styles from './EventTimeline.module.css'
 
@@ -35,7 +35,7 @@ export function EventTimeline({
                   <img src={event.coverImage} alt="" loading="lazy" />
                 </span>
                 <span className={styles.body}>
-                  <span className={styles.date}>{formatDateRange(event.startDate, event.endDate, language)}</span>
+                  <span className={styles.date}>{formatEventDate(event, language)}</span>
                   <span className={styles.title}>{pickText(event.title, language)}</span>
                 </span>
                 <span className={styles.typeBadge}>{t.eventType[event.type][language]}</span>
