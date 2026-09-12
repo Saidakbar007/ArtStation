@@ -4,10 +4,6 @@ import { Reveal } from '../components/Reveal'
 import { useLanguage } from '../i18n/LanguageContext'
 import styles from './ContactPage.module.css'
 
-// Telegram отчёт не упоминает, в старом коде сайта встречались два
-// разных адреса — оставлены на будущее до уточнения:
-// TODO: t.me/artstation_silkroad или @artstationuzb ?
-
 export function ContactPage() {
   const { language, t } = useLanguage()
 
@@ -34,13 +30,13 @@ export function ContactPage() {
             <li>
               <div className={styles.infoLabel}>{t.contact.emailLabel[language]}</div>
               <div className={styles.infoValue}>
-                <a href="mailto:artstation.uz@gmail.com">artstation.uz@gmail.com</a>
+                <a href="mailto:info@artstation.uz">info@artstation.uz</a>
               </div>
             </li>
             <li>
-              <div className={styles.infoLabel}>{t.contact.phoneLabel[language]}</div>
+              <div className={styles.infoLabel}>{t.contact.telegramLabel[language]}</div>
               <div className={styles.infoValue}>
-                <a href="tel:+998950209988">+998 95 020 99 88</a>
+                <a href="https://t.me/artstationit" target="_blank" rel="noreferrer">@artstationit</a>
               </div>
             </li>
             <li>

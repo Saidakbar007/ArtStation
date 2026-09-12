@@ -16,26 +16,15 @@
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-  color: var(--ink);
   display: flex;
   align-items: center;
-  gap: 0.4em;
   flex-shrink: 0;
-  white-space: nowrap;
 }
 
-.logoDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--color-yellow);
-  display: inline-block;
-  flex-shrink: 0;
+.logoImg {
+  display: block;
+  height: 26px;
+  width: auto;
 }
 
 .nav {
@@ -97,8 +86,8 @@
     padding: 4px 5px;
   }
 
-  .logo {
-    font-size: 1.1rem;
+  .logoImg {
+    height: 22px;
   }
 }
 

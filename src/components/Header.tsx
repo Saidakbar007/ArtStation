@@ -24,8 +24,11 @@ export function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.bar}`}>
         <NavLink to="/" className={styles.logo} onClick={() => setMenuOpen(false)}>
-          <span className={styles.logoDot} />
-          Art Station
+          <img
+            src={theme === 'dark' ? 'images/logo/artstation-logo-white.webp' : 'images/logo/artstation-logo-black.webp'}
+            alt="Art Station"
+            className={styles.logoImg}
+          />
         </NavLink>
 
         <nav className={styles.nav}>
