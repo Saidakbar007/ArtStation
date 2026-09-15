@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://saidakbar007.github.io/ArtStation/sitemap.xml
+Sitemap: https://artstations.uz/sitemap.xml

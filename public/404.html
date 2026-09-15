@@ -2,6 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // GitHub Pages SPA fallback (spa-github-pages): GitHub Pages отдаёт этот
+      // файл на любой путь, для которого нет файла на диске (например прямой
+      // заход на /about). Сохраняем путь в sessionStorage и уходим на главную,
+      // где скрипт восстановления в index.html вернёт его через
+      // history.replaceState — так BrowserRouter получает нужный маршрут без
+      // настоящего 404 и без "#" в адресе.
+      sessionStorage.setItem('spa-redirect', location.pathname + location.search + location.hash)
+      location.replace('/')
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,21 +21,6 @@
       rel="stylesheet"
     />
     <title>Art Station</title>
-    <script>
-      // GitHub Pages SPA fallback (spa-github-pages): 404.html сохранил
-      // исходный путь в sessionStorage перед редиректом на index.html —
-      // возвращаем его через history.replaceState до того, как BrowserRouter
-      // прочитает location при первом рендере.
-      (function () {
-        var redirect = sessionStorage.getItem('spa-redirect')
-        if (redirect) {
-          sessionStorage.removeItem('spa-redirect')
-          if (redirect !== location.pathname + location.search + location.hash) {
-            history.replaceState(null, '', redirect)
-          }
-        }
-      })()
-    </script>
     <script>
       // Выставляем тему до отрисовки, чтобы не мигало светлым при загрузке.
       (function () {
@@ -41,6 +36,5 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
