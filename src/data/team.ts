@@ -1,5 +1,4 @@
 import type { TeamMember } from '../types'
-import { placeholderAvatar } from '../utils/placeholder'
 
 /*
   Реальный состав команды (имена и фото подтверждены заказчиком,
@@ -7,8 +6,8 @@ import { placeholderAvatar } from '../utils/placeholder'
   - Дона Кулматова — директор (см. data/about.ts, foreword.directorName).
   - Асаль Байматова — менеджер / организатор (подтверждено заказчиком).
   - Дарья Раскольникова — фотограф (по кредитам фото в событиях).
-  TODO(заказчику): прислать должность Абдумалика Абруева + его фото,
-  подтвердить Наталью Думко и её фото.
+  TODO(заказчику): прислать должность Абдумалика Абруева (фото уже
+  есть), подтвердить Наталью Думко и её фото.
 */
 export const team: TeamMember[] = [
   {
@@ -26,7 +25,7 @@ export const team: TeamMember[] = [
   {
     id: 'abdumalik-abruev',
     name: 'Абдумалик Абруев',
-    photo: placeholderAvatar('Abdumalik Abruev'),
+    photo: 'images/team/abdumalik-abruev.webp',
   },
   {
     id: 'darya-raskolnikova',
