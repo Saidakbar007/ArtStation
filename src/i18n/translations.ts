@@ -39,6 +39,7 @@ export const ui = {
       en: 'Art Station is an organization bringing together exhibitions, lectures, residencies, and interdisciplinary cultural projects in Uzbekistan.',
     },
     aboutLink: { ru: 'Узнать больше', uz: "Batafsil bilish", en: 'Learn more' },
+    openCallBadge: { ru: 'Open Call', uz: 'Open Call', en: 'Open Call' },
     upcomingTitle: { ru: 'Ближайшие события', uz: 'Yaqin tadbirlar', en: 'Upcoming events' },
     upcomingSubtitle: {
       ru: 'То, что происходит в Art Station прямо сейчас и в ближайшее время',

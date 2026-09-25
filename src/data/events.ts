@@ -1241,8 +1241,8 @@ export const fullEvents: EventFull[] = [
     applyUrl: 'https://forms.gle/P66husSNDNZy95Zz8',
     machineTranslatedLangs: ['uz', 'en'],
     title: {
-      ru: 'Открытый набор в передвижную арт-лабораторию',
-      uz: 'Ko‘chma san’at laboratoriyasiga ochiq tanlov',
+      ru: 'Open Call: открытый набор в передвижную арт-лабораторию',
+      uz: 'Open Call: ko‘chma san’at laboratoriyasiga ochiq tanlov',
       en: 'Open Call: Traveling Art Laboratory',
     },
     description: {
