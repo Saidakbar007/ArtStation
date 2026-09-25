@@ -94,6 +94,7 @@ export const ui = {
       uz: 'Mashina tarjimasi — asl matn inglizchada',
       en: 'Machine translated from the English original',
     },
+    apply: { ru: 'Подать заявку', uz: 'Ariza topshirish', en: 'Apply' },
   },
   about: {
     title: { ru: 'О нас', uz: 'Biz haqimizda', en: 'About' },

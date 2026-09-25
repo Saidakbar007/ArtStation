@@ -48,6 +48,10 @@ export interface EventFull extends EventBase {
   partnerIds: string[]
   artistIds: string[]
   gallery: string[]
+  /** Видео анонса/репортажа (mp4), показывается рядом с обложкой. */
+  video?: string
+  /** Ссылка на форму подачи заявки — показывается кнопкой на странице события. */
+  applyUrl?: string
   /**
    * Языки, в которых title/description были переведены машинно (не
    * профессиональным переводчиком), потому что в источнике перевод

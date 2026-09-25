@@ -27,10 +27,16 @@
   }
 }
 
-.imageCol img {
+.imageCol img,
+.imageCol video {
   width: 100%;
   border-radius: var(--radius-md);
   object-fit: cover;
+}
+
+.video {
+  margin-top: var(--space-2);
+  background: var(--color-black);
 }
 
 .gallery {
@@ -82,6 +88,25 @@
 .description p {
   margin: 0 0 1em;
   line-height: 1.7;
+}
+
+.apply {
+  display: inline-flex;
+  align-items: center;
+  margin-top: var(--space-3);
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 12px 24px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--transition-fast);
+}
+
+.apply:hover {
+  background: var(--color-yellow);
+  color: var(--color-black);
 }
 
 .partners {

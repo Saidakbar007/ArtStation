@@ -35,6 +35,9 @@ export function EventDetailPage() {
       <div className={styles.layout}>
         <div className={styles.imageCol}>
           <img src={event.coverImage} alt={title} loading="eager" />
+          {event.video && (
+            <video className={styles.video} src={event.video} controls playsInline preload="metadata" />
+          )}
           {event.gallery.length > 0 && (
             <div className={styles.gallery}>
               {event.gallery.map((src) => (
@@ -78,6 +81,12 @@ export function EventDetailPage() {
               <p key={i}>{para}</p>
             ))}
           </div>
+
+          {event.applyUrl && (
+            <a className={styles.apply} href={event.applyUrl} target="_blank" rel="noreferrer">
+              {t.eventDetail.apply[language]} →
+            </a>
+          )}
 
           {eventPartners.length > 0 && (
             <div className={styles.partners}>

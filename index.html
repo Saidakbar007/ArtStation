@@ -2,6 +2,17 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <!--
+      Данные о событиях (coverImage/gallery/video) хранят пути без ведущего
+      "/" (например "images/events/.../cover.webp"). Раньше это работало,
+      потому что HashRouter всегда держал реальный путь документа "/" — со
+      значимой частью после "#". С BrowserRouter путь документа становится
+      настоящим ("/events/some-id"), и без базового URL браузер резолвил бы
+      такие относительные пути от текущей глубины (получая
+      "/events/images/..."). base href="/" фиксирует резолвинг всех
+      относительных ссылок к корню сайта независимо от глубины маршрута.
+    -->
+    <base href="/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
