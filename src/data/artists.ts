@@ -18,6 +18,14 @@ const stub = (id: string, name: string, role: Artist['role'], eventIds: string[]
 })
 
 export const artists: Artist[] = [
+  {
+    id: 'peter-aerschmann',
+    role: 'artist',
+    name: { ru: 'Peter Aerschmann', uz: 'Peter Aerschmann', en: 'Peter Aerschmann' },
+    bio: { ru: '', uz: '', en: '' },
+    photo: 'images/artists/peter-aerschmann.webp',
+    eventIds: ['ws_digital_art_animation_2026', 'exh_marionettes_2026'],
+  },
   stub('nick-sayers', 'Nick Sayers', 'curator', ['exh_at_the_edge_2025']),
   stub('sarvinoz-kasimova', 'Sarvinoz Kasimova', 'curator', ['exh_language_of_rivers_2025']),
   stub('baktygul-midinova', 'Baktygul Midinova', 'curator', ['exh_language_of_rivers_2025']),

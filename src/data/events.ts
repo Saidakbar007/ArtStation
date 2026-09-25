@@ -1128,7 +1128,7 @@ export const fullEvents: EventFull[] = [
     coverImage: 'images/events/ws_digital_art_animation_2026/cover.webp',
     gallery: ['images/events/ws_digital_art_animation_2026/gallery-1.webp'],
     partnerIds: [],
-    artistIds: [],
+    artistIds: ['peter-aerschmann'],
     machineTranslatedLangs: ['ru', 'uz'],
     title: {
       ru: 'Воркшоп по цифровому искусству и анимации с Петером Эршманном',
@@ -1151,7 +1151,7 @@ export const fullEvents: EventFull[] = [
     coverImage: 'images/events/exh_marionettes_2026/cover.webp',
     gallery: ['images/events/exh_marionettes_2026/gallery-1.webp'],
     partnerIds: [],
-    artistIds: [],
+    artistIds: ['peter-aerschmann'],
     machineTranslatedLangs: ['uz', 'en'],
     title: {
       ru: 'MARIONETTES — персональная выставка Петера Эршманна',

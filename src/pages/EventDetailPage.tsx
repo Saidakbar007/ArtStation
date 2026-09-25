@@ -71,7 +71,16 @@ export function EventDetailPage() {
                 </span>
               )}
               {eventArtists.length > 0 && (
-                <span>{eventArtists.map((a) => pickText(a.name, language)).join(', ')}</span>
+                <div className={styles.artistList}>
+                  {eventArtists.map((a) => (
+                    <span key={a.id} className={styles.artistChip}>
+                      {!a.photo.startsWith('https://placehold.co') && (
+                        <img className={styles.artistAvatar} src={a.photo} alt="" loading="lazy" />
+                      )}
+                      {pickText(a.name, language)}
+                    </span>
+                  ))}
+                </div>
               )}
             </div>
           )}
