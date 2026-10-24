@@ -34,8 +34,20 @@
   object-fit: cover;
 }
 
+.media {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+@media (min-width: 560px) {
+  .media:has(.video) {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
 .video {
-  margin-top: var(--space-2);
   background: var(--color-black);
 }
 

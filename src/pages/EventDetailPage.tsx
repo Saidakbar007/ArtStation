@@ -34,10 +34,12 @@ export function EventDetailPage() {
       <Reveal>
       <div className={styles.layout}>
         <div className={styles.imageCol}>
-          <img src={event.coverImage} alt={title} loading="eager" />
-          {event.video && (
-            <video className={styles.video} src={event.video} controls playsInline preload="metadata" />
-          )}
+          <div className={styles.media}>
+            <img src={event.coverImage} alt={title} loading="eager" />
+            {event.video && (
+              <video className={styles.video} src={event.video} controls playsInline preload="metadata" />
+            )}
+          </div>
           {event.gallery.length > 0 && (
             <div className={styles.gallery}>
               {event.gallery.map((src) => (
