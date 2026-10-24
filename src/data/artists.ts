@@ -38,4 +38,16 @@ export const artists: Artist[] = [
   stub('nigina-khudaybergenova', 'Nigina Khudaybergenova', 'curator', ['exh_23_neuyat_2025']),
   stub('umida-akhmedova', 'Umida Akhmedova', 'curator', ['exh_lahza_engage_h2o_2025']),
   stub('oleg-karpov', 'Oleg Karpov', 'curator', ['exh_lahza_engage_h2o_2025']),
+  {
+    id: 'yulia-sorokina',
+    role: 'curator',
+    name: { ru: 'Юлия Сорокина', uz: 'Yuliya Sorokina', en: 'Yulia Sorokina' },
+    bio: {
+      ru: 'Исследовательница, куратор, PhD, доцент кафедры «Арт-менеджмент и продюсирование» Казахской национальной академии искусств имени Темирбека Жургенова. В своей профессиональной практике Юлия объединяет кураторскую, исследовательскую и образовательную деятельность, уделяя особое внимание современному искусству, культурным процессам и междисциплинарному взаимодействию.',
+      uz: 'Tadqiqotchi, kurator, PhD, T. Jurgenov nomidagi Qozog‘iston Milliy San’at Akademiyasining «San’at menejmenti va prodyuserlik» kafedrasi dotsenti. O‘z professional faoliyatida Yuliya kuratorlik, tadqiqot va ta’lim faoliyatini birlashtiradi, zamonaviy san’at, madaniy jarayonlar va fanlararo hamkorlikka alohida e’tibor qaratadi.',
+      en: 'Researcher and curator, PhD, Senior Lecturer at the Department of Art Management and Production of the T. Zhurgenov Kazakh National Academy of Arts. In her professional practice, Yulia combines curatorial, research, and educational work, with a particular focus on contemporary art, cultural processes, and interdisciplinary collaboration.',
+    },
+    photo: 'images/artists/yulia-sorokina.webp',
+    eventIds: ['lab_margilan_samarkand_bukhara_2026'],
+  },
 ]
