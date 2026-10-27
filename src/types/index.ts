@@ -86,3 +86,16 @@ export interface TeamMember {
   role?: string
   photo: string
 }
+
+export interface InstagramMedia {
+  src: string
+  type: 'image' | 'video'
+}
+
+export interface InstagramPost {
+  shortcode: string
+  date: string
+  caption: string
+  instagram_url: string
+  media: InstagramMedia[]
+}

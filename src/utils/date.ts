@@ -96,3 +96,9 @@ export function pickFeaturedEvent<T extends { startDate: string; endDate?: strin
 
   return null
 }
+
+/** Дата поста из Instagram — день, месяц, год на текущем языке интерфейса. */
+export function formatPostDate(iso: string, lang: Language): string {
+  const locale = localeMap[lang]
+  return new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(iso))
+}

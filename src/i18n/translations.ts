@@ -12,6 +12,7 @@ export const ui = {
     events: { ru: 'Программа', uz: 'Dastur', en: 'Events' },
     about: { ru: 'О нас', uz: 'Biz haqimizda', en: 'About' },
     contact: { ru: 'Контакты', uz: 'Aloqa', en: 'Contact' },
+    instagram: { ru: 'Instagram', uz: 'Instagram', en: 'Instagram' },
   },
   theme: {
     toLight: { ru: 'Светлая тема', uz: 'Yorug‘ mavzu', en: 'Light theme' },
@@ -146,6 +147,26 @@ export const ui = {
       uz: "Xabarni yuborib bo'lmadi. Keyinroq urinib ko'ring yoki to'g'ridan-to'g'ri pochtaga yozing.",
       en: 'Could not send the message. Please try again later or email us directly.',
     },
+  },
+  instagram: {
+    title: { ru: 'Instagram', uz: 'Instagram', en: 'Instagram' },
+    subtitle: {
+      ru: 'Последние публикации Art Station из Instagram',
+      uz: "Art Stationning Instagramdagi so'nggi postlari",
+      en: 'Latest posts from Art Station on Instagram',
+    },
+    loading: { ru: 'Загрузка...', uz: 'Yuklanmoqda...', en: 'Loading...' },
+    empty: {
+      ru: 'Пока нет опубликованных постов',
+      uz: "Hali e'lon qilingan postlar yo'q",
+      en: 'No posts published yet',
+    },
+    error: {
+      ru: 'Не удалось загрузить посты. Попробуйте обновить страницу.',
+      uz: "Postlarni yuklab bo'lmadi. Sahifani qayta yuklab ko'ring.",
+      en: 'Could not load posts. Try reloading the page.',
+    },
+    viewOnInstagram: { ru: 'Смотреть в Instagram', uz: "Instagram'da ko'rish", en: 'View on Instagram' },
   },
   footer: {
     rights: { ru: 'Все права защищены', uz: 'Barcha huquqlar himoyalangan', en: 'All rights reserved' },
