@@ -12,7 +12,7 @@ export const ui = {
     events: { ru: 'Программа', uz: 'Dastur', en: 'Events' },
     about: { ru: 'О нас', uz: 'Biz haqimizda', en: 'About' },
     contact: { ru: 'Контакты', uz: 'Aloqa', en: 'Contact' },
-    instagram: { ru: 'Instagram', uz: 'Instagram', en: 'Instagram' },
+    news: { ru: 'Новости', uz: 'Yangiliklar', en: 'News' },
   },
   theme: {
     toLight: { ru: 'Светлая тема', uz: 'Yorug‘ mavzu', en: 'Light theme' },
@@ -148,25 +148,34 @@ export const ui = {
       en: 'Could not send the message. Please try again later or email us directly.',
     },
   },
-  instagram: {
-    title: { ru: 'Instagram', uz: 'Instagram', en: 'Instagram' },
+  news: {
+    title: { ru: 'Новости', uz: 'Yangiliklar', en: 'News' },
     subtitle: {
-      ru: 'Последние публикации Art Station из Instagram',
-      uz: "Art Stationning Instagramdagi so'nggi postlari",
-      en: 'Latest posts from Art Station on Instagram',
+      ru: 'Новости и публикации Art Station',
+      uz: "Art Stationning yangiliklari va postlari",
+      en: 'News and posts from Art Station',
+    },
+    homeTitle: { ru: 'Последние новости', uz: "So'nggi yangiliklar", en: 'Latest news' },
+    homeSubtitle: {
+      ru: 'То, о чём Art Station недавно рассказала в своих соцсетях',
+      uz: "Art Station ijtimoiy tarmoqlarida yaqinda e'lon qilgan narsalar",
+      en: 'What Art Station has recently shared on social media',
     },
     loading: { ru: 'Загрузка...', uz: 'Yuklanmoqda...', en: 'Loading...' },
-    empty: {
-      ru: 'Пока нет опубликованных постов',
-      uz: "Hali e'lon qilingan postlar yo'q",
-      en: 'No posts published yet',
-    },
+    empty: { ru: 'Новостей пока нет', uz: "Hozircha yangiliklar yo'q", en: 'No news yet' },
     error: {
-      ru: 'Не удалось загрузить посты. Попробуйте обновить страницу.',
-      uz: "Postlarni yuklab bo'lmadi. Sahifani qayta yuklab ko'ring.",
-      en: 'Could not load posts. Try reloading the page.',
+      ru: 'Не удалось загрузить новости. Попробуйте обновить страницу.',
+      uz: "Yangiliklarni yuklab bo'lmadi. Sahifani qayta yuklab ko'ring.",
+      en: 'Could not load the news. Try reloading the page.',
     },
-    viewOnInstagram: { ru: 'Смотреть в Instagram', uz: "Instagram'da ko'rish", en: 'View on Instagram' },
+    back: { ru: 'Все новости', uz: 'Barcha yangiliklar', en: 'All news' },
+    viewAll: { ru: 'Все новости', uz: 'Barcha yangiliklar', en: 'All news' },
+    source: { ru: 'Источник: Instagram', uz: 'Manba: Instagram', en: 'Source: Instagram' },
+    notFound: {
+      ru: 'Новость не найдена',
+      uz: 'Yangilik topilmadi',
+      en: 'News post not found',
+    },
   },
   footer: {
     rights: { ru: 'Все права защищены', uz: 'Barcha huquqlar himoyalangan', en: 'All rights reserved' },

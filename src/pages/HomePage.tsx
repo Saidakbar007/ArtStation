@@ -8,15 +8,19 @@ import { SectionHeading } from '../components/SectionHeading'
 import { StatsBlock } from '../components/StatsBlock'
 import { PartnerStrip } from '../components/PartnerStrip'
 import { Reveal } from '../components/Reveal'
+import { NewsCard } from '../components/NewsCard'
 import { events, fullEvents } from '../data/events'
 import { partners } from '../data/partners'
 import { useLanguage } from '../i18n/LanguageContext'
+import { useNewsPosts, NEWS_DIR } from '../hooks/useNewsPosts'
 import type { Event } from '../types'
 import styles from './HomePage.module.css'
 
 export function HomePage() {
   const { language, t } = useLanguage()
   const [modalEvent, setModalEvent] = useState<Event | null>(null)
+  const { posts: newsPosts } = useNewsPosts()
+  const latestNews = (newsPosts ?? []).slice(0, 3)
 
   const { primary, featuredPast } = useMemo(() => {
     // "Проекты этого года" — события, датированные текущим календарным
@@ -83,6 +87,28 @@ export function HomePage() {
             <div className="container">
               <SectionHeading title={t.home.samarkandTitle[language]} subtitle={t.home.samarkandSubtitle[language]} />
               <EventSlider events={featuredPast} />
+            </div>
+          </section>
+        </Reveal>
+      )}
+
+      {latestNews.length > 0 && (
+        <Reveal>
+          <section className={styles.section} style={{ background: 'var(--surface-alt)' }}>
+            <div className="container">
+              <SectionHeading
+                eyebrow="Art Station"
+                title={t.news.homeTitle[language]}
+                subtitle={t.news.homeSubtitle[language]}
+              />
+              <div className={styles.newsGrid}>
+                {latestNews.map((post) => (
+                  <NewsCard key={post.shortcode} post={post} mediaBase={NEWS_DIR} />
+                ))}
+              </div>
+              <Link to="/news" className={styles.viewAll}>
+                {t.news.viewAll[language]} →
+              </Link>
             </div>
           </section>
         </Reveal>

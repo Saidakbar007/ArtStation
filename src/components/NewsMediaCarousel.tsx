@@ -1,15 +1,15 @@
 import { useRef, useState } from 'react'
-import type { InstagramMedia } from '../types'
-import styles from './InstagramMediaCarousel.module.css'
+import type { NewsMedia } from '../types'
+import styles from './NewsMediaCarousel.module.css'
 
-function MediaItem({ item }: { item: InstagramMedia }) {
+function MediaItem({ item }: { item: NewsMedia }) {
   if (item.type === 'video') {
     return <video className={styles.media} src={item.src} controls playsInline preload="metadata" />
   }
   return <img className={styles.media} src={item.src} alt="" loading="lazy" />
 }
 
-export function InstagramMediaCarousel({ media }: { media: InstagramMedia[] }) {
+export function NewsMediaCarousel({ media }: { media: NewsMedia[] }) {
   const trackRef = useRef<HTMLDivElement>(null)
   const [active, setActive] = useState(0)
 

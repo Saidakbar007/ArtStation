@@ -87,15 +87,15 @@ export interface TeamMember {
   photo: string
 }
 
-export interface InstagramMedia {
+export interface NewsMedia {
   src: string
   type: 'image' | 'video'
 }
 
-export interface InstagramPost {
+export interface NewsPost {
   shortcode: string
   date: string
   caption: string
   instagram_url: string
-  media: InstagramMedia[]
+  media: NewsMedia[]
 }

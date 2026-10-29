@@ -16,7 +16,7 @@ export function Header() {
   const links = [
     { to: '/', label: t.nav.home[language] },
     { to: '/events', label: t.nav.events[language] },
-    { to: '/instagram', label: t.nav.instagram[language] },
+    { to: '/news', label: t.nav.news[language] },
     { to: '/about', label: t.nav.about[language] },
     { to: '/contact', label: t.nav.contact[language] },
   ]
