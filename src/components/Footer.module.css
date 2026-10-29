@@ -61,8 +61,28 @@
   font-size: 0.95rem;
 }
 
+.list a {
+  position: relative;
+  display: inline-block;
+}
+
+.list a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 0;
+  background: var(--color-yellow);
+  transition: width var(--transition-fast);
+}
+
 .list a:hover {
   color: var(--color-yellow);
+}
+
+.list a:hover::after {
+  width: 100%;
 }
 
 .bottom {

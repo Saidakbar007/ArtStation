@@ -28,6 +28,11 @@
 
 .chip:hover {
   border-color: var(--border-hover);
+  transform: translateY(-1px);
+}
+
+.chip:active {
+  transform: scale(0.95);
 }
 
 .chipActive {

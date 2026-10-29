@@ -7,6 +7,13 @@
   overflow: hidden;
   text-decoration: none;
   color: inherit;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-fast);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: 0 14px 28px var(--shadow-md);
 }
 
 .imageWrap {
