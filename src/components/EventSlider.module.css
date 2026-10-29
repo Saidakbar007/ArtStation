@@ -7,11 +7,26 @@
   gap: var(--space-4);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth НЕ ставим здесь — это свойство управляет и
+     прямым присвоением scrollLeft, а не только scrollBy()/scrollTo().
+     Автопрокрутка (EventSlider.tsx) двигает трек через scrollLeft каждый
+     кадр (~16мс) — с smooth каждый кадр запускал бы новую smooth-анимацию
+     поверх незавершённой предыдущей, и видимого движения почти не было.
+     Стрелкам smooth не нужен из CSS: они сами передают
+     behavior: 'smooth' в вызов scrollBy(). */
   padding-block: var(--space-1) var(--space-2);
   margin: 0 -2px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+}
+
+/* Пока идёт автопрокрутка, снэппинг отключаем: у программных прыжков
+   scrollLeft нет "активного скролла" от жеста пользователя, который бы
+   отложил примагничивание — браузер может тянуть позицию обратно к
+   началу карточки на каждом кадре. На паузе (hover/тач/стрелка) снэппинг
+   снова работает и красиво доводит до ближайшей карточки. */
+.track.autoplaying {
+  scroll-snap-type: none;
 }
 
 .track::-webkit-scrollbar {

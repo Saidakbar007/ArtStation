@@ -31,6 +31,12 @@ export function EventSlider({
     if (!track) return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
+    // Гарантируем мгновенные прыжки scrollLeft независимо от CSS: если
+    // scroll-behavior где-то окажется smooth, каждый кадр будет запускать
+    // новую smooth-анимацию поверх незавершённой предыдущей, и видимого
+    // движения почти не будет.
+    track.style.scrollBehavior = 'auto'
+
     let direction: 1 | -1 = 1
     let last = performance.now()
     let raf = requestAnimationFrame(step)
@@ -40,7 +46,10 @@ export function EventSlider({
       last = now
 
       const maxScroll = track!.scrollWidth - track!.clientWidth
-      if (maxScroll > 0 && !hoveredRef.current && !interactingRef.current) {
+      const autoplaying = maxScroll > 0 && !hoveredRef.current && !interactingRef.current
+      track!.classList.toggle(styles.autoplaying, autoplaying)
+
+      if (autoplaying) {
         let next = track!.scrollLeft + direction * AUTOPLAY_SPEED * dt
         if (next >= maxScroll) {
           next = maxScroll
