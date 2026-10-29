@@ -13,6 +13,7 @@ import { events, fullEvents } from '../data/events'
 import { partners } from '../data/partners'
 import { useLanguage } from '../i18n/LanguageContext'
 import { useNewsPosts, NEWS_DIR } from '../hooks/useNewsPosts'
+import { sortByRecency } from '../utils/date'
 import type { Event } from '../types'
 import styles from './HomePage.module.css'
 
@@ -24,12 +25,12 @@ export function HomePage() {
 
   const { primary, featuredPast } = useMemo(() => {
     // "Проекты этого года" — события, датированные текущим календарным
-    // годом (сортировка по дате). Часть из них ещё не прошла, поэтому
-    // фото может не быть — это ожидаемо для по-настоящему "этого года".
+    // годом, по давности: идущие сейчас/будущие выше прошедших, внутри
+    // группы — чем недавнее началось (или закончилось для прошедших),
+    // тем выше. Так, например, завершившийся open call уступает место
+    // выставке, которая всё ещё открыта.
     const currentYear = new Date().getFullYear()
-    const thisYear = events
-      .filter((e) => new Date(e.startDate).getFullYear() === currentYear)
-      .sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
+    const thisYear = sortByRecency(events.filter((e) => new Date(e.startDate).getFullYear() === currentYear))
 
     const primary: Event[] =
       thisYear.length > 0

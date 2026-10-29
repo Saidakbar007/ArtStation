@@ -97,6 +97,36 @@ export function pickFeaturedEvent<T extends { startDate: string; endDate?: strin
   return null
 }
 
+/**
+ * Сортирует события "по давности": сначала идущие сейчас/будущие
+ * (чем недавнее началось — тем выше), затем прошедшие (чем недавнее
+ * закончилось — тем выше). Так завершившийся open call сам уходит
+ * вниз списка, а идущая дольше выставка поднимается на первое место,
+ * как только более новое по старту событие заканчивается.
+ */
+export function sortByRecency<T extends { startDate: string; endDate?: string }>(
+  events: T[],
+  now: Date = new Date(),
+): T[] {
+  const statusRank: Record<EventStatus, number> = { ongoing: 0, upcoming: 1, past: 2 }
+
+  return [...events].sort((a, b) => {
+    const statusA = getEventStatus(a.startDate, a.endDate, now)
+    const statusB = getEventStatus(b.startDate, b.endDate, now)
+
+    if (statusA !== statusB) return statusRank[statusA] - statusRank[statusB]
+
+    if (statusA === 'upcoming') {
+      return new Date(a.startDate).getTime() - new Date(b.startDate).getTime()
+    }
+    if (statusA === 'ongoing') {
+      return new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
+    }
+    const effectiveEnd = (e: T) => new Date(e.endDate ?? e.startDate).getTime()
+    return effectiveEnd(b) - effectiveEnd(a)
+  })
+}
+
 /** Дата новости — всегда по-русски ("26 октября 2026"), независимо от языка интерфейса. */
 export function formatNewsDate(iso: string): string {
   return new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(iso))
