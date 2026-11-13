@@ -39,7 +39,7 @@ export function Footer() {
 
       <div className={`container ${styles.bottom}`}>
         <span>&copy; {new Date().getFullYear()} Art Station. {t.footer.rights[language]}.</span>
-        <span>Tashkent, Astronomy Park, ARTepa Gallery</span>
+        <span>{t.footer.currentExhibition[language]}</span>
       </div>
     </footer>
   )

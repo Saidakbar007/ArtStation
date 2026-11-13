@@ -110,7 +110,7 @@ export const ui = {
       uz: "Tarixan Art Station Samarqand, Beruniy ko'chasi, 1-uyda, Ipak yo'li xalqaro turizm va madaniy meros universiteti qoshida joylashgan edi. 2024–2025 hisobot davri oxirida tashkilot tashkiliy o'zgarishlarni boshdan kechirdi va endi bitta doimiy maydonga bog'lanmagan — Art Station endi O'zbekistonning turli mintaqalaridagi hamkor maydonlar orqali ishlaydi.",
       en: 'Historically, Art Station was located at Samarkand, Beruni Str. 1, at the Silk Road International University of Tourism and Cultural Heritage. At the end of the 2024–2025 reporting period, the organization underwent organizational changes and is no longer tied to one permanent venue — Art Station now operates through partner spaces in different regions of Uzbekistan.',
     },
-    currentAddressLabel: { ru: 'Текущий адрес', uz: 'Joriy manzil', en: 'Current address' },
+    currentAddressLabel: { ru: 'Текущая выставка', uz: 'Hozirgi ko‘rgazma', en: 'Current exhibition' },
   },
   contact: {
     title: { ru: 'Контакты', uz: 'Aloqa', en: 'Contact' },
@@ -119,12 +119,12 @@ export const ui = {
       uz: "Yozing, qo'ng'iroq qiling, keling — biz doim muloqotga tayyormiz",
       en: 'Write, call, visit — we always welcome a conversation',
     },
-    addressLabel: { ru: 'Адрес', uz: 'Manzil', en: 'Address' },
+    addressLabel: { ru: 'Текущая выставка', uz: 'Hozirgi ko‘rgazma', en: 'Current exhibition' },
     hoursLabel: { ru: 'Часы работы', uz: 'Ish vaqti', en: 'Hours' },
     hoursTodo: {
-      ru: 'уточняется для нового адреса',
-      uz: 'yangi manzil uchun aniqlanmoqda',
-      en: 'to be confirmed for the new address',
+      ru: 'зависит от площадки текущего события',
+      uz: 'joriy tadbir o‘tkaziladigan joyga bog‘liq',
+      en: 'depends on the venue of the current event',
     },
     telegramLabel: { ru: 'Telegram', uz: 'Telegram', en: 'Telegram' },
     emailLabel: { ru: 'Email', uz: 'Email', en: 'Email' },
@@ -179,6 +179,11 @@ export const ui = {
   },
   footer: {
     rights: { ru: 'Все права защищены', uz: 'Barcha huquqlar himoyalangan', en: 'All rights reserved' },
+    currentExhibition: {
+      ru: 'Сейчас: выставка в ARTepa Gallery, Ташкент',
+      uz: 'Hozir: ARTepa Gallery, Toshkentda ko‘rgazma',
+      en: 'Now: exhibition at ARTepa Gallery, Tashkent',
+    },
   },
   eventType: {
     exhibition: { ru: 'Выставка', uz: "Ko'rgazma", en: 'Exhibition' },
