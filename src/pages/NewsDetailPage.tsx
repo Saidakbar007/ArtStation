@@ -57,9 +57,11 @@ export function NewsDetailPage() {
             <h1 className={styles.title}>{title}</h1>
             {body && <p className={styles.text}>{body}</p>}
 
-            <a href={post.instagram_url} target="_blank" rel="noreferrer" className={styles.source}>
-              {t.news.source[language]}
-            </a>
+            {post.instagram_url && (
+              <a href={post.instagram_url} target="_blank" rel="noreferrer" className={styles.source}>
+                {t.news.source[language]}
+              </a>
+            )}
           </div>
         </div>
       </Reveal>

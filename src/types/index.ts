@@ -96,6 +96,6 @@ export interface NewsPost {
   shortcode: string
   date: string
   caption: string
-  instagram_url: string
+  instagram_url?: string
   media: NewsMedia[]
 }
