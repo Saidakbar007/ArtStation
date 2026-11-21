@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Hero } from '../components/Hero'
+import { OpenCallSpotlight } from '../components/OpenCallSpotlight'
 import { EventCard } from '../components/EventCard'
 import { EventModal } from '../components/EventModal'
 import { EventSlider } from '../components/EventSlider'
@@ -48,6 +49,8 @@ export function HomePage() {
   return (
     <div>
       <Hero />
+
+      <OpenCallSpotlight />
 
       <Reveal>
         <section className={styles.aboutTeaser}>
